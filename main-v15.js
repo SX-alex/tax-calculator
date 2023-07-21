@@ -847,33 +847,14 @@ let valSocialSecurity = isTreatmentToggle ? ssc_tc_taxAmountChecked : ssc_tc_tax
 let valCapitalGains = taxAmount;
 let valTotalTaxes = valIncomeTaxes + valSocialSecurity + valCapitalGains;
 
-let valPaymentFromVsop = isTreatmentToggle ? sharesPriceLoc : 0;
+let valPaymentFromVsop = sharesPriceLoc;
 let valVsopIncomeTaxes = incomeTaxVsop;
 let valVsopSocialSecurity = ssc_tc_taxAmountVsop;
 
 calculateTax();
 
-console.log(gainCapital);
-console.log(taxAmount);
-
-outBenefit.textContent = Math.round(valueOfSharesLoc - exercisePriceLoc > 0 ? valueOfSharesLoc - exercisePriceLoc : 0);
-outCapitalGain.textContent = Math.round(gainCapital);
-outTaxPoint.textContent = taxPoint;
-outIncomeTaxes.textContent = Math.round(valIncomeTaxes)
-outSocialSecurity.textContent = Math.round(valSocialSecurity)
-outCapitalGains.textContent = Math.round(valCapitalGains)
-
-outVsopPayment.textContent = Math.round(valPaymentFromVsop)
-outVsopTaxPoint.textContent = taxPoint
-outVsopIncomeTaxes.textContent = Math.round(valVsopIncomeTaxes)
-outVsopSocialSecurity.textContent = Math.round(valVsopSocialSecurity)
-
-yourCostOut.textContent = Math.round(exercisePriceLoc);
-totalTaxesOut.textContent = Math.round(valTotalTaxes);
-yourGainOut.textContent = Math.round(sharesPriceLoc - valTotalTaxes - exercisePriceLoc);
-
-totalTaxesOutVsop.textContent = isTreatmentToggle ? valVsopIncomeTaxes + valVsopSocialSecurity : 0;
-yourGainOutVsop.textContent = isTreatmentToggle ? valPaymentFromVsop - valVsopIncomeTaxes + valVsopSocialSecurity : 0;
+console.log(incomeTaxVsop);
+console.log(ssc_tc_taxAmountVsop);
 
 function updateData() {
 	//set default values
@@ -931,6 +912,8 @@ function updateData() {
   yourGainOutVsop.textContent = isTreatmentToggle ? valPaymentFromVsop - valVsopIncomeTaxes + valVsopSocialSecurity : 0;
   
 }
+
+updateData();
 
 taxCountryField.onchange = () => {
     updateData();
