@@ -903,13 +903,13 @@ function updateData() {
   yourGainOut.textContent = Math.round(sharesPriceLoc - valTotalTaxes - exercisePriceLoc);
 	
   totalTaxesOutVsop.textContent = incomeTaxVsop + ssc_tc_taxAmountVsop;
-  yourGainOutVsop.textContent = sharesPriceLoc - incomeTaxVsop + ssc_tc_taxAmountVsop;
+  yourGainOutVsop.textContent = sharesPriceLoc - ( incomeTaxVsop + ssc_tc_taxAmountVsop );
 
   yourCostBar.style.height = Math.ceil( ( exercisePriceLoc / sharesPriceLoc ) * 100) + "%";
   totalTaxesBar.style.height = Math.ceil( ( valTotalTaxes / sharesPriceLoc ) * 100) + "%";
   yourGainBar.style.height = Math.ceil( ( ( sharesPriceLoc - valTotalTaxes - exercisePriceLoc ) / sharesPriceLoc ) * 100) + "%";
   totalTaxesBarVsop.style.height = Math.ceil( ( ( incomeTaxVsop + ssc_tc_taxAmountVsop ) / sharesPriceLoc ) * 100) + "%";
-  yourGainBarVsop.style.height = Math.ceil( ( ( sharesPriceLoc - incomeTaxVsop + ssc_tc_taxAmountVsop ) / sharesPriceLoc ) * 100) + "%";
+  yourGainBarVsop.style.height = Math.ceil( ( ( sharesPriceLoc - ( incomeTaxVsop + ssc_tc_taxAmountVsop ) ) / sharesPriceLoc ) * 100) + "%";
   
 }
 
