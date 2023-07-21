@@ -108,7 +108,8 @@ const valueOfSharesField = document.getElementById('value-of-shares-field');
 const sharesPriceField = document.getElementById('shares-price-field');
 const annualIncomeField = document.getElementById("annual-income-field");
 const currencyElements = document.getElementsByClassName('is--currency');
-const treatmentToggle = document.getElementsByClassName('treatment-toggle');
+
+const treatmentToggle = document.getElementById('treatment-toggle');
 
 //get outputs
 const yourCostOut = document.getElementById('your-cost-out');
