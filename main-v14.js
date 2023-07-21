@@ -798,10 +798,10 @@ function removeCommas(value) {
 }
 
 let taxCountryLoc = setCountryCur(taxCountryField.options[taxCountryField.selectedIndex].text);
-let exercisePriceLoc = '10';
-let valueOfSharesLoc = '500';
-let sharesPriceLoc = '10000';
-let annualIncomeLoc = '100000';
+let exercisePriceLoc = 10;
+let valueOfSharesLoc = 500;
+let sharesPriceLoc = 10000;
+let annualIncomeLoc = 100000;
 let isTreatmentToggle = treatmentToggle.checked;
 
 let selectedCountry = taxCountryField.value;
@@ -882,10 +882,10 @@ function updateData() {
     replaceTextAll(taxCountryLoc);
   }
   
-  exercisePriceLoc = exercisePriceField.value === '' ? '10' : removeCommas(exercisePriceField.value);
-  valueOfSharesLoc = valueOfSharesField.value === '' ? '500' : removeCommas(valueOfSharesField.value);
-  sharesPriceLoc = sharesPriceField.value === '' ? '10000' : removeCommas(sharesPriceField.value);
-  annualIncomeLoc = annualIncomeField.value === '' ? '100000' : removeCommas(annualIncomeField.value);
+  exercisePriceLoc = exercisePriceField.value === '' ? 10 : removeCommas(exercisePriceField.value);
+  valueOfSharesLoc = valueOfSharesField.value === '' ? 500 : removeCommas(valueOfSharesField.value);
+  sharesPriceLoc = sharesPriceField.value === '' ? 10000 : removeCommas(sharesPriceField.value);
+  annualIncomeLoc = annualIncomeField.value === '' ? 100000 : removeCommas(annualIncomeField.value);
   isTreatmentToggle = treatmentToggle.checked;
 
   yourCostBar.style.height = Math.ceil( ( exercisePriceLoc / sharesPriceLoc ) * 100) + "%";
