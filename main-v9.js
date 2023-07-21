@@ -247,6 +247,8 @@ taxCountryField.onchange = () => {
     updateData();
 };
 
+treatmentToggle.addEventListener('change', updateData);
+
 taxCountryField.addEventListener('input', updateData);
 exercisePriceField.addEventListener('input', updateData);
 valueOfSharesField.addEventListener('input', updateData);
