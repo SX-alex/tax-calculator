@@ -901,15 +901,15 @@ function updateData() {
 
   outVsopPayment.textContent = Math.round(valPaymentFromVsop)
   outVsopTaxPoint.textContent = taxPoint
-  outVsopIncomeTaxes.textContent = Math.round(valVsopIncomeTaxes)
-  outVsopSocialSecurity.textContent = Math.round(valVsopSocialSecurity)
+  outVsopIncomeTaxes.textContent = Math.round(incomeTaxVsop);
+  outVsopSocialSecurity.textContent = Math.round(ssc_tc_taxAmountVsop);
 
   yourCostOut.textContent = Math.round(exercisePriceLoc);
   totalTaxesOut.textContent = Math.round(valTotalTaxes);
   yourGainOut.textContent = Math.round(sharesPriceLoc - valTotalTaxes - exercisePriceLoc);
 	
-  totalTaxesOutVsop.textContent = isTreatmentToggle ? valVsopIncomeTaxes + valVsopSocialSecurity : 0;
-  yourGainOutVsop.textContent = isTreatmentToggle ? valPaymentFromVsop - valVsopIncomeTaxes + valVsopSocialSecurity : 0;
+  totalTaxesOutVsop.textContent = valVsopIncomeTaxes + valVsopSocialSecurity;
+  yourGainOutVsop.textContent = valPaymentFromVsop - valVsopIncomeTaxes + valVsopSocialSecurity;
   
 }
 
