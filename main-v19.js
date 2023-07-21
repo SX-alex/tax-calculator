@@ -902,8 +902,8 @@ function updateData() {
   totalTaxesOut.textContent = Math.round(valTotalTaxes);
   yourGainOut.textContent = Math.round(sharesPriceLoc - valTotalTaxes - exercisePriceLoc);
 	
-  totalTaxesOutVsop.textContent = incomeTaxVsop + ssc_tc_taxAmountVsop;
-  yourGainOutVsop.textContent = sharesPriceLoc - ( incomeTaxVsop + ssc_tc_taxAmountVsop );
+  totalTaxesOutVsop.textContent = Math.round ( incomeTaxVsop + ssc_tc_taxAmountVsop );
+  yourGainOutVsop.textContent = Math.round ( sharesPriceLoc - ( incomeTaxVsop + ssc_tc_taxAmountVsop ) );
 
   yourCostBar.style.height = Math.ceil( ( exercisePriceLoc / sharesPriceLoc ) * 100) + "%";
   totalTaxesBar.style.height = Math.ceil( ( valTotalTaxes / sharesPriceLoc ) * 100) + "%";
