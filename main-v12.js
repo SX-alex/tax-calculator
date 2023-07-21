@@ -722,6 +722,14 @@ const yourGainBar = document.getElementById('your-gain-bar');
 const totalTaxesBarVsop = document.getElementById('total-taxes-bar__vsop');
 const yourGainBarVsop = document.getElementById('your-gain-bar__vsop');
 
+const outBenefit = document.getElementById('out-benefit');
+const outCapitalGain = document.getElementById('out-capital-gain');
+const outTaxPoint = document.getElementById('out-tax-point');
+const outIncomeTaxes = document.getElementById('out-income-taxes');
+const outSocialSecurity = document.getElementById('out-social-security');
+const outCapitalGains = document.getElementById('out-capital-gains');
+
+
 exercisePriceField.addEventListener('input', (event) => {
   formatInputWithCommas(event.target);
 });
@@ -830,6 +838,11 @@ let taxPoint;
 let gainCapital;
 let taxAmount;
 
+let valIncomeTaxes = isTreatmentToggle ? incomeTaxChecked : incomeTax;
+let valSocialSecurity = isTreatmentToggle ? ssc_tc_taxAmountChecked : ssc_tc_taxAmount;
+let valCapitalGains = taxAmount;
+let valTotalTaxes = valIncomeTaxes + valSocialSecurity + valCapitalGains;
+
 calculateTax();
 
 console.log(gainCapital);
@@ -847,12 +860,6 @@ function updateData() {
   sharesPriceLoc = sharesPriceField.value === '' ? '10000' : removeCommas(sharesPriceField.value);
   annualIncomeLoc = annualIncomeField.value === '' ? '100000' : removeCommas(annualIncomeField.value);
   isTreatmentToggle = treatmentToggle.checked;
-  
-  yourCostOut.textContent = exercisePriceLoc;
-  totalTaxesOut.textContent = valueOfSharesLoc;
-  yourGainOut.textContent = sharesPriceLoc - valueOfSharesLoc - exercisePriceLoc;
-  totalTaxesOutVsop.textContent = valueOfSharesLoc;
-  yourGainOutVsop.textContent = sharesPriceLoc - valueOfSharesLoc - exercisePriceLoc;
 
   yourCostBar.style.height = Math.ceil( ( exercisePriceLoc / sharesPriceLoc ) * 100) + "%";
   totalTaxesBar.style.height = Math.ceil( ( valueOfSharesLoc / sharesPriceLoc ) * 100) + "%";
@@ -860,6 +867,9 @@ function updateData() {
   totalTaxesBarVsop.style.height = Math.ceil( ( valueOfSharesLoc / sharesPriceLoc ) * 100) + "%";
   yourGainBarVsop.style.height = Math.ceil( ( ( sharesPriceLoc - valueOfSharesLoc - exercisePriceLoc ) / sharesPriceLoc ) * 100) + "%";
 
+  isTreatmentToggle = treatmentToggle.checked;
+  selectedCountry = taxCountryField.value;
+  
   calculateTax();
 
   console.log(gainCapital);
@@ -868,6 +878,26 @@ function updateData() {
   console.log(taxPoint);
   console.log(gainCapital);
   console.log(taxAmount);
+
+  totalTaxesOutVsop.textContent = valueOfSharesLoc;
+  yourGainOutVsop.textContent = sharesPriceLoc - valueOfSharesLoc - exercisePriceLoc;
+
+  valIncomeTaxes = isTreatmentToggle ? incomeTaxChecked : incomeTax;
+  valSocialSecurity = isTreatmentToggle ? ssc_tc_taxAmountChecked : ssc_tc_taxAmount;
+  valCapitalGains = taxAmount;
+  valTotalTaxes = valIncomeTaxes + valSocialSecurity + valCapitalGains;
+
+  outBenefit.textContent = valueOfSharesLoc - exercisePriceLoc > 0 ? valueOfSharesLoc - exercisePriceLoc : 0;
+  outCapitalGain.textContent = gainCapital;
+  outTaxPoint.textContent = taxPoint;
+  outIncomeTaxes.textContent = Math.round(valIncomeTaxes)
+  outSocialSecurity.textContent = Math.round(valSocialSecurity)
+  outCapitalGains.textContent = Math.round(valCapitalGains)
+
+  yourCostOut.textContent = exercisePriceLoc;
+  totalTaxesOut.textContent = valTotalTaxes;
+  yourGainOut.textContent = sharesPriceLoc - valTotalTaxes - exercisePriceLoc;
+  
 }
 
 taxCountryField.onchange = () => {
