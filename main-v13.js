@@ -729,6 +729,10 @@ const outIncomeTaxes = document.getElementById('out-income-taxes');
 const outSocialSecurity = document.getElementById('out-social-security');
 const outCapitalGains = document.getElementById('out-capital-gains');
 
+const outVsopPayment = document.getElementById('out-vsop-payment');
+const outVsopTaxPoint = document.getElementById('out-vsop-tax-point');
+const outVsopIncomeTaxes = document.getElementById('out-vsop-income-taxes');
+const outVsopSocialSecurity = document.getElementById('out-vsop-social-security');
 
 exercisePriceField.addEventListener('input', (event) => {
   formatInputWithCommas(event.target);
@@ -843,10 +847,33 @@ let valSocialSecurity = isTreatmentToggle ? ssc_tc_taxAmountChecked : ssc_tc_tax
 let valCapitalGains = taxAmount;
 let valTotalTaxes = valIncomeTaxes + valSocialSecurity + valCapitalGains;
 
+let valPaymentFromVsop = isTreatmentToggle ? sharesPriceLoc : 0;
+let valVsopIncomeTaxes = incomeTaxVsop;
+let valVsopSocialSecurity = ssc_tc_taxAmountVsop;
+
 calculateTax();
 
 console.log(gainCapital);
 console.log(taxAmount);
+
+outBenefit.textContent = Math.round(valueOfSharesLoc - exercisePriceLoc > 0 ? valueOfSharesLoc - exercisePriceLoc : 0);
+outCapitalGain.textContent = Math.round(gainCapital);
+outTaxPoint.textContent = taxPoint;
+outIncomeTaxes.textContent = Math.round(valIncomeTaxes)
+outSocialSecurity.textContent = Math.round(valSocialSecurity)
+outCapitalGains.textContent = Math.round(valCapitalGains)
+
+outVsopPayment.textContent = Math.round(valPaymentFromVsop)
+outVsopTaxPoint.textContent = taxPoint
+outVsopIncomeTaxes.textContent = Math.round(valVsopIncomeTaxes)
+outVsopSocialSecurity.textContent = Math.round(valVsopSocialSecurity)
+
+yourCostOut.textContent = Math.round(exercisePriceLoc);
+totalTaxesOut.textContent = Math.round(valTotalTaxes);
+yourGainOut.textContent = Math.round(sharesPriceLoc - valTotalTaxes - exercisePriceLoc);
+
+totalTaxesOutVsop.textContent = isTreatmentToggle ? valVsopIncomeTaxes + valVsopSocialSecurity : 0;
+yourGainOutVsop.textContent = isTreatmentToggle ? valPaymentFromVsop - valVsopIncomeTaxes + valVsopSocialSecurity : 0;
 
 function updateData() {
 	//set default values
@@ -879,24 +906,29 @@ function updateData() {
   console.log(gainCapital);
   console.log(taxAmount);
 
-  totalTaxesOutVsop.textContent = valueOfSharesLoc;
-  yourGainOutVsop.textContent = sharesPriceLoc - valueOfSharesLoc - exercisePriceLoc;
-
   valIncomeTaxes = isTreatmentToggle ? incomeTaxChecked : incomeTax;
   valSocialSecurity = isTreatmentToggle ? ssc_tc_taxAmountChecked : ssc_tc_taxAmount;
   valCapitalGains = taxAmount;
   valTotalTaxes = valIncomeTaxes + valSocialSecurity + valCapitalGains;
 
-  outBenefit.textContent = valueOfSharesLoc - exercisePriceLoc > 0 ? valueOfSharesLoc - exercisePriceLoc : 0;
-  outCapitalGain.textContent = gainCapital;
+  outBenefit.textContent = Math.round(valueOfSharesLoc - exercisePriceLoc > 0 ? valueOfSharesLoc - exercisePriceLoc : 0);
+  outCapitalGain.textContent = Math.round(gainCapital);
   outTaxPoint.textContent = taxPoint;
   outIncomeTaxes.textContent = Math.round(valIncomeTaxes)
   outSocialSecurity.textContent = Math.round(valSocialSecurity)
   outCapitalGains.textContent = Math.round(valCapitalGains)
 
-  yourCostOut.textContent = exercisePriceLoc;
-  totalTaxesOut.textContent = valTotalTaxes;
-  yourGainOut.textContent = sharesPriceLoc - valTotalTaxes - exercisePriceLoc;
+  outVsopPayment.textContent = Math.round(valPaymentFromVsop)
+  outVsopTaxPoint.textContent = taxPoint
+  outVsopIncomeTaxes.textContent = Math.round(valVsopIncomeTaxes)
+  outVsopSocialSecurity.textContent = Math.round(valVsopSocialSecurity)
+
+  yourCostOut.textContent = Math.round(exercisePriceLoc);
+  totalTaxesOut.textContent = Math.round(valTotalTaxes);
+  yourGainOut.textContent = Math.round(sharesPriceLoc - valTotalTaxes - exercisePriceLoc);
+	
+  totalTaxesOutVsop.textContent = isTreatmentToggle ? valVsopIncomeTaxes + valVsopSocialSecurity : 0;
+  yourGainOutVsop.textContent = isTreatmentToggle ? valPaymentFromVsop - valVsopIncomeTaxes + valVsopSocialSecurity : 0;
   
 }
 
