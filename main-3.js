@@ -239,7 +239,7 @@ function updateData() {
   totalTaxesBarVsop.style.height = Math.ceil( ( valueOfSharesLoc / sharesPriceLoc ) * 100) + "%";
   yourGainBarVsop.style.height = Math.ceil( ( ( sharesPriceLoc - valueOfSharesLoc - exercisePriceLoc ) / sharesPriceLoc ) * 100) + "%";
 
-  console.log(treatmentToggle.value);
+  console.log(treatmentToggle.checked);
 }
 
 taxCountryField.onchange = () => {
