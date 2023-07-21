@@ -874,13 +874,6 @@ function updateData() {
   
   calculateTax();
 
-  console.log(gainCapital);
-  console.log(taxAmount);
-
-  console.log(taxPoint);
-  console.log(gainCapital);
-  console.log(taxAmount);
-
   valIncomeTaxes = isTreatmentToggle ? incomeTaxChecked : incomeTax;
   valSocialSecurity = isTreatmentToggle ? ssc_tc_taxAmountChecked : ssc_tc_taxAmount;
   valCapitalGains = taxAmount;
@@ -892,6 +885,10 @@ function updateData() {
   outIncomeTaxes.textContent = Math.round(valIncomeTaxes)
   outSocialSecurity.textContent = Math.round(valSocialSecurity)
   outCapitalGains.textContent = Math.round(valCapitalGains)
+
+  valPaymentFromVsop = sharesPriceLoc;
+  valVsopIncomeTaxes = incomeTaxVsop;
+  valVsopSocialSecurity = ssc_tc_taxAmountVsop;
 
   outVsopPayment.textContent = Math.round(valPaymentFromVsop)
   outVsopTaxPoint.textContent = taxPoint
