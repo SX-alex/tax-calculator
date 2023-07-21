@@ -858,6 +858,7 @@ console.log(ssc_tc_taxAmountVsop);
 
 function updateData() {
 	//set default values
+	
   if ( taxCountryLoc !== setCountryCur(taxCountryField.options[taxCountryField.selectedIndex].text) ){
   	taxCountryLoc = setCountryCur(taxCountryField.options[taxCountryField.selectedIndex].text);
     replaceTextAll(taxCountryLoc);
@@ -871,6 +872,9 @@ function updateData() {
 
   isTreatmentToggle = treatmentToggle.checked;
   selectedCountry = taxCountryField.value;
+
+  vsopBenefitAmount = sharesPriceLoc;
+  vsopBenefitAmountIncome = annualIncomeLoc + vsopBenefitAmount;
   
   calculateTax();
 
