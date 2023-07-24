@@ -524,8 +524,8 @@ const calculateTax = () => {
         taxAmount = ( gainCapital - 58900 ) * 42 / 100 + calculatePersentValue( 58900, 27 )
       }
 
-  	console.log(incomeTax);
-  	console.log(incomeTaxVsop);
+  	console.log(denmarkTaxInc);
+  	console.log(vsopDenmarkTaxInc);
       
       break;
     case "poland":
@@ -862,6 +862,9 @@ function updateData() {
 
   isTreatmentToggle = treatmentToggle.checked;
   selectedCountry = taxCountryField.value;
+
+  benefitAmount = valueOfSharesLoc - exercisePriceLoc > 0 ? valueOfSharesLoc - exercisePriceLoc : 0;
+  benefitAmountIncome = annualIncomeLoc + benefitAmount;
 
   vsopBenefitAmount = sharesPriceLoc;
   vsopBenefitAmountIncome = annualIncomeLoc + vsopBenefitAmount;
