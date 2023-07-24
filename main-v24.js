@@ -836,6 +836,8 @@ let ssc_tc_taxAmountVsop;
 
 let incomeTax;
 let incomeTaxChecked;
+console.log(incomeTax)
+console.log(incomeTaxChecked)
 let incomeTaxVsop;
 
 let taxPoint;
