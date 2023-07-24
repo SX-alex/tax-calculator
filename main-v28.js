@@ -523,6 +523,9 @@ const calculateTax = () => {
       }else{
         taxAmount = ( gainCapital - 58900 ) * 42 / 100 + calculatePersentValue( 58900, 27 )
       }
+
+  	console.log(incomeTax);
+  	console.log(incomeTaxVsop);
       
       break;
     case "poland":
@@ -843,9 +846,6 @@ let valVsopSocialSecurity = ssc_tc_taxAmountVsop;
 
 calculateTax();
 
-console.log(incomeTaxVsop);
-console.log(ssc_tc_taxAmountVsop);
-
 function updateData() {
 	//set default values
 	
@@ -885,8 +885,6 @@ function updateData() {
   outSocialSecurity.textContent = Math.round(valSocialSecurity)
   outCapitalGains.textContent = Math.round(valCapitalGains)
 
-	console.log(valIncomeTaxes);
-
   valPaymentFromVsop = sharesPriceLoc;
   valVsopIncomeTaxes = incomeTaxVsop;
   valVsopSocialSecurity = ssc_tc_taxAmountVsop;
@@ -912,6 +910,9 @@ function updateData() {
 }
 
 updateData();
+
+console.log(incomeTaxVsop);
+console.log(ssc_tc_taxAmountVsop);
 
 taxCountryField.onchange = () => {
     updateData();
