@@ -523,9 +523,6 @@ const calculateTax = () => {
       }else{
         taxAmount = ( gainCapital - 58900 ) * 42 / 100 + calculatePersentValue( 58900, 27 )
       }
-
-		  console.log(incomeTaxChecked);
-		  console.log(incomeTax);
       
       break;
     case "poland":
@@ -801,10 +798,10 @@ function removeCommas(value) {
 }
 
 let taxCountryLoc = setCountryCur(taxCountryField.options[taxCountryField.selectedIndex].text);
-let exercisePriceLoc;
-let valueOfSharesLoc;
-let sharesPriceLoc;
-let annualIncomeLoc;
+let exercisePriceLoc = 10;
+let valueOfSharesLoc = 500;
+let sharesPriceLoc = 10000;
+let annualIncomeLoc = 100000;
 let isTreatmentToggle = treatmentToggle.checked;
 
 let selectedCountry = taxCountryField.value;
@@ -814,18 +811,6 @@ let benefitAmountIncome = annualIncomeLoc + benefitAmount;
 
 let vsopBenefitAmount = sharesPriceLoc;
 let vsopBenefitAmountIncome = annualIncomeLoc + vsopBenefitAmount;
-
-yourCostOut.textContent = exercisePriceLoc;
-totalTaxesOut.textContent = valueOfSharesLoc;
-yourGainOut.textContent = sharesPriceLoc - valueOfSharesLoc - exercisePriceLoc;
-totalTaxesOutVsop.textContent = valueOfSharesLoc;
-yourGainOutVsop.textContent = sharesPriceLoc - valueOfSharesLoc - exercisePriceLoc;
-
-yourCostBar.style.height = Math.ceil( ( exercisePriceLoc / sharesPriceLoc ) * 100) + "%";
-totalTaxesBar.style.height = Math.ceil( ( valueOfSharesLoc / sharesPriceLoc ) * 100) + "%";
-yourGainBar.style.height = Math.ceil( ( ( sharesPriceLoc - valueOfSharesLoc - exercisePriceLoc ) / sharesPriceLoc ) * 100) + "%";
-totalTaxesBarVsop.style.height = Math.ceil( ( valueOfSharesLoc / sharesPriceLoc ) * 100) + "%";
-yourGainBarVsop.style.height = Math.ceil( ( ( sharesPriceLoc - valueOfSharesLoc - exercisePriceLoc ) / sharesPriceLoc ) * 100) + "%";
 
 let ssc_erp_taxAmount;
 let ssc_erp_taxAmountVsop;
@@ -858,6 +843,9 @@ let valVsopSocialSecurity = ssc_tc_taxAmountVsop;
 
 calculateTax();
 
+console.log(incomeTaxVsop);
+console.log(ssc_tc_taxAmountVsop);
+
 function updateData() {
 	//set default values
 	
@@ -871,9 +859,6 @@ function updateData() {
   sharesPriceLoc = sharesPriceField.value === '' ? 10000 : removeCommas(sharesPriceField.value);
   annualIncomeLoc = annualIncomeField.value === '' ? 100000 : removeCommas(annualIncomeField.value);
   isTreatmentToggle = treatmentToggle.checked;
-
-	console.log(incomeTaxes);
-	console.log(incomeTaxes);
 
   isTreatmentToggle = treatmentToggle.checked;
   selectedCountry = taxCountryField.value;
@@ -899,6 +884,8 @@ function updateData() {
   outIncomeTaxes.textContent = Math.round(valIncomeTaxes)
   outSocialSecurity.textContent = Math.round(valSocialSecurity)
   outCapitalGains.textContent = Math.round(valCapitalGains)
+
+	console.log(valIncomeTaxes);
 
   valPaymentFromVsop = sharesPriceLoc;
   valVsopIncomeTaxes = incomeTaxVsop;
