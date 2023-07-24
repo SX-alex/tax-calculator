@@ -875,6 +875,11 @@ function updateData() {
 
   vsopBenefitAmount = sharesPriceLoc;
   vsopBenefitAmountIncome = annualIncomeLoc + vsopBenefitAmount;
+
+  valIncomeTaxes = isTreatmentToggle ? incomeTaxChecked : incomeTax;
+  valSocialSecurity = isTreatmentToggle ? ssc_tc_taxAmountChecked : ssc_tc_taxAmount;
+  valCapitalGains = taxAmount;
+  valTotalTaxes = valIncomeTaxes + valSocialSecurity + valCapitalGains;
   
   calculateTax();
 
@@ -889,6 +894,8 @@ function updateData() {
   outIncomeTaxes.textContent = Math.round(valIncomeTaxes)
   outSocialSecurity.textContent = Math.round(valSocialSecurity)
   outCapitalGains.textContent = Math.round(valCapitalGains)
+
+	console.log(valIncomeTaxes);
 
   valPaymentFromVsop = sharesPriceLoc;
   valVsopIncomeTaxes = incomeTaxVsop;
