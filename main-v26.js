@@ -815,6 +815,18 @@ let benefitAmountIncome = annualIncomeLoc + benefitAmount;
 let vsopBenefitAmount = sharesPriceLoc;
 let vsopBenefitAmountIncome = annualIncomeLoc + vsopBenefitAmount;
 
+yourCostOut.textContent = exercisePriceLoc;
+totalTaxesOut.textContent = valueOfSharesLoc;
+yourGainOut.textContent = sharesPriceLoc - valueOfSharesLoc - exercisePriceLoc;
+totalTaxesOutVsop.textContent = valueOfSharesLoc;
+yourGainOutVsop.textContent = sharesPriceLoc - valueOfSharesLoc - exercisePriceLoc;
+
+yourCostBar.style.height = Math.ceil( ( exercisePriceLoc / sharesPriceLoc ) * 100) + "%";
+totalTaxesBar.style.height = Math.ceil( ( valueOfSharesLoc / sharesPriceLoc ) * 100) + "%";
+yourGainBar.style.height = Math.ceil( ( ( sharesPriceLoc - valueOfSharesLoc - exercisePriceLoc ) / sharesPriceLoc ) * 100) + "%";
+totalTaxesBarVsop.style.height = Math.ceil( ( valueOfSharesLoc / sharesPriceLoc ) * 100) + "%";
+yourGainBarVsop.style.height = Math.ceil( ( ( sharesPriceLoc - valueOfSharesLoc - exercisePriceLoc ) / sharesPriceLoc ) * 100) + "%";
+
 let ssc_erp_taxAmount;
 let ssc_erp_taxAmountVsop;
 
