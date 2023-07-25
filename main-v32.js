@@ -523,9 +523,6 @@ const calculateTax = () => {
       }else{
         taxAmount = ( gainCapital - 58900 ) * 42 / 100 + calculatePersentValue( 58900, 27 )
       }
-
-  	console.log(denmarkTaxInc);
-  	console.log(vsopDenmarkTaxInc);
       
       break;
     case "poland":
@@ -554,7 +551,7 @@ const calculateTax = () => {
       pitRate = [ 12, 32 ];
       
       incomeTax = calculateIncomeTaxProgres(taxBrackets, pitRate, benefitAmountIncome, benefitAmount, 0);
-      incomeTaxChecked = calculateIncomeTaxProgres(taxBrackets, pitRate, benefitAmountIncome, benefitAmount, 0);
+      incomeTaxChecked = 0;
       incomeTaxVsop = calculateIncomeTaxProgres(taxBrackets, pitRate, vsopBenefitAmountIncome, vsopBenefitAmount, 0);
       
       // CAPITAL GAIN
@@ -566,8 +563,6 @@ const calculateTax = () => {
       }
       
       taxAmount = calculatePersentValue(gainCapital, 19);
-		  console.log(ssc_tc_taxAmount);
-		  console.log(ssc_tc_taxAmountChecked);
       
       break;
     case "georgia":
@@ -829,8 +824,6 @@ let ssc_tc_taxAmountVsop;
 
 let incomeTax;
 let incomeTaxChecked;
-console.log(incomeTax)
-console.log(incomeTaxChecked)
 let incomeTaxVsop;
 
 let taxPoint;
@@ -877,11 +870,6 @@ function updateData() {
   valSocialSecurity = isTreatmentToggle ? ssc_tc_taxAmountChecked : ssc_tc_taxAmount;
   valCapitalGains = taxAmount;
   valTotalTaxes = valIncomeTaxes + valSocialSecurity + valCapitalGains;
-
-	console.log('//');
-	console.log(ssc_tc_taxAmount);
-	console.log(ssc_tc_taxAmountChecked);
-	console.log(valSocialSecurity);
 
   outBenefit.textContent = Math.round(valueOfSharesLoc - exercisePriceLoc > 0 ? valueOfSharesLoc - exercisePriceLoc : 0);
   outCapitalGain.textContent = Math.round(gainCapital);
