@@ -106,6 +106,23 @@ const calculateIncomeTaxProgres =(taxBrackets, pitRate, benefitAmountIncome, ben
   return taxAmount;
 }
 
+function formatOut(number) {
+  // Round the number using Math.round
+  const roundedNumber = Math.round(number);
+
+  // Convert the number to a string
+  let formattedNumber = roundedNumber.toString();
+
+  // Add commas every three digits from the end
+  const numberOfCommas = Math.floor((formattedNumber.length - 1) / 3);
+  for (let i = 1; i <= numberOfCommas; i++) {
+    const commaIndex = formattedNumber.length - i * 3;
+    formattedNumber = formattedNumber.slice(0, commaIndex) + ',' + formattedNumber.slice(commaIndex);
+  }
+
+  return formattedNumber;
+}
+
 const calculateTax = () => {
   let ssrRate;
   let ssrRateE;
@@ -802,7 +819,7 @@ let exercisePriceLoc = 10;
 let valueOfSharesLoc = 500;
 let sharesPriceLoc = 10000;
 let annualIncomeLoc = 100000;
-let isTreatmentToggle = !treatmentToggle.checked;
+let isTreatmentToggle = treatmentToggle.checked;
 
 let selectedCountry = taxCountryField.value;
 
@@ -849,12 +866,12 @@ function updateData() {
     replaceTextAll(taxCountryLoc);
   }
   
-  exercisePriceLoc = exercisePriceField.value === '' ? 10 : removeCommas(exercisePriceField.value);
+  exercisePriceLoc = exercisePriceField.value === '' ? 12 : removeCommas(exercisePriceField.value);
   valueOfSharesLoc = valueOfSharesField.value === '' ? 500 : removeCommas(valueOfSharesField.value);
   sharesPriceLoc = sharesPriceField.value === '' ? 10000 : removeCommas(sharesPriceField.value);
   annualIncomeLoc = annualIncomeField.value === '' ? 100000 : removeCommas(annualIncomeField.value);
 
-  isTreatmentToggle = !treatmentToggle.checked;
+  isTreatmentToggle = treatmentToggle.checked;
   selectedCountry = taxCountryField.value;
 
   benefitAmount = valueOfSharesLoc - exercisePriceLoc > 0 ? valueOfSharesLoc - exercisePriceLoc : 0;
@@ -870,28 +887,28 @@ function updateData() {
   valCapitalGains = taxAmount;
   valTotalTaxes = valIncomeTaxes + valSocialSecurity + valCapitalGains;
 
-  outBenefit.textContent = Math.round(valueOfSharesLoc - exercisePriceLoc > 0 ? valueOfSharesLoc - exercisePriceLoc : 0);
-  outCapitalGain.textContent = Math.round(gainCapital);
+  outBenefit.textContent = formatOut(valueOfSharesLoc - exercisePriceLoc > 0 ? valueOfSharesLoc - exercisePriceLoc : 0);
+  outCapitalGain.textContent = formatOut(gainCapital);
   outTaxPoint.textContent = taxPoint;
-  outIncomeTaxes.textContent = Math.round(valIncomeTaxes)
-  outSocialSecurity.textContent = Math.round(valSocialSecurity)
-  outCapitalGains.textContent = Math.round(valCapitalGains)
+  outIncomeTaxes.textContent = formatOut(valIncomeTaxes)
+  outSocialSecurity.textContent = formatOut(valSocialSecurity)
+  outCapitalGains.textContent = formatOut(valCapitalGains)
 
   valPaymentFromVsop = sharesPriceLoc;
   valVsopIncomeTaxes = incomeTaxVsop;
   valVsopSocialSecurity = ssc_tc_taxAmountVsop;
 
-  outVsopPayment.textContent = Math.round(valPaymentFromVsop)
-  outVsopTaxPoint.textContent = taxPoint
-  outVsopIncomeTaxes.textContent = Math.round(incomeTaxVsop);
-  outVsopSocialSecurity.textContent = Math.round(ssc_tc_taxAmountVsop);
+  outVsopPayment.textContent = formatOut(valPaymentFromVsop)
+  outVsopTaxPoint.textContent = formatOut(taxPoint)
+  outVsopIncomeTaxes.textContent = formatOut(incomeTaxVsop);
+  outVsopSocialSecurity.textContent = formatOut(ssc_tc_taxAmountVsop);
 
-  yourCostOut.textContent = Math.round(exercisePriceLoc);
-  totalTaxesOut.textContent = Math.round(valTotalTaxes);
-  yourGainOut.textContent = Math.round(sharesPriceLoc - valTotalTaxes - exercisePriceLoc);
+  yourCostOut.textContent = formatOut(exercisePriceLoc);
+  totalTaxesOut.textContent = formatOut(valTotalTaxes);
+  yourGainOut.textContent = formatOut(sharesPriceLoc - valTotalTaxes - exercisePriceLoc);
 	
-  totalTaxesOutVsop.textContent = Math.round ( incomeTaxVsop + ssc_tc_taxAmountVsop );
-  yourGainOutVsop.textContent = Math.round ( sharesPriceLoc - ( incomeTaxVsop + ssc_tc_taxAmountVsop ) );
+  totalTaxesOutVsop.textContent = formatOut ( incomeTaxVsop + ssc_tc_taxAmountVsop );
+  yourGainOutVsop.textContent = formatOut ( sharesPriceLoc - ( incomeTaxVsop + ssc_tc_taxAmountVsop ) );
 
   yourCostBar.style.height = Math.ceil( ( exercisePriceLoc / sharesPriceLoc ) * 100) + "%";
   totalTaxesBar.style.height = Math.ceil( ( valTotalTaxes / sharesPriceLoc ) * 100) + "%";
