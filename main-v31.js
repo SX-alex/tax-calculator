@@ -566,6 +566,7 @@ const calculateTax = () => {
       }
       
       taxAmount = calculatePersentValue(gainCapital, 19);
+		  console.log(ssc_tc_taxAmount);
 		  console.log(ssc_tc_taxAmountChecked);
       
       break;
@@ -877,6 +878,9 @@ function updateData() {
   valCapitalGains = taxAmount;
   valTotalTaxes = valIncomeTaxes + valSocialSecurity + valCapitalGains;
 
+	console.log('//');
+	console.log(ssc_tc_taxAmount);
+	console.log(ssc_tc_taxAmountChecked);
 	console.log(valSocialSecurity);
 
   outBenefit.textContent = Math.round(valueOfSharesLoc - exercisePriceLoc > 0 ? valueOfSharesLoc - exercisePriceLoc : 0);
@@ -911,9 +915,6 @@ function updateData() {
 }
 
 updateData();
-
-console.log(incomeTaxVsop);
-console.log(ssc_tc_taxAmountVsop);
 
 taxCountryField.onchange = () => {
     updateData();
