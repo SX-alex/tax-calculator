@@ -899,7 +899,7 @@ function updateData() {
   valVsopSocialSecurity = ssc_tc_taxAmountVsop;
 
   outVsopPayment.textContent = formatOut(valPaymentFromVsop)
-  outVsopTaxPoint.textContent = formatOut(taxPoint)
+  outVsopTaxPoint.textContent = "Payment";
   outVsopIncomeTaxes.textContent = formatOut(incomeTaxVsop);
   outVsopSocialSecurity.textContent = formatOut(ssc_tc_taxAmountVsop);
 
