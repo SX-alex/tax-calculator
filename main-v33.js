@@ -280,7 +280,7 @@ const calculateTax = () => {
         gainCapital = Math.max( sharesPriceLoc - valueOfSharesLoc, 0);
       }
       
-      taxAmount = calculatePersentValue(gainCapital, 20);
+      taxAmount = calculatePersentValue(gainCapital, 25);
       
       break;
     case "latvia":
@@ -802,7 +802,7 @@ let exercisePriceLoc = 10;
 let valueOfSharesLoc = 500;
 let sharesPriceLoc = 10000;
 let annualIncomeLoc = 100000;
-let isTreatmentToggle = treatmentToggle.checked;
+let isTreatmentToggle = !treatmentToggle.checked;
 
 let selectedCountry = taxCountryField.value;
 
@@ -853,9 +853,8 @@ function updateData() {
   valueOfSharesLoc = valueOfSharesField.value === '' ? 500 : removeCommas(valueOfSharesField.value);
   sharesPriceLoc = sharesPriceField.value === '' ? 10000 : removeCommas(sharesPriceField.value);
   annualIncomeLoc = annualIncomeField.value === '' ? 100000 : removeCommas(annualIncomeField.value);
-  isTreatmentToggle = treatmentToggle.checked;
 
-  isTreatmentToggle = treatmentToggle.checked;
+  isTreatmentToggle = !treatmentToggle.checked;
   selectedCountry = taxCountryField.value;
 
   benefitAmount = valueOfSharesLoc - exercisePriceLoc > 0 ? valueOfSharesLoc - exercisePriceLoc : 0;
