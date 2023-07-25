@@ -320,7 +320,7 @@ const calculateTax = () => {
         gainCapital = Math.max( sharesPriceLoc - valueOfSharesLoc, 0);
       }
       
-      taxAmount = calculatePersentValue(gainCapital, 0);
+      taxAmount = calculatePersentValue(gainCapital, 20);
       
       break;
     case "lithuania":
