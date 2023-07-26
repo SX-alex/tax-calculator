@@ -168,6 +168,12 @@ const calculateTax = () => {
       }
       
       taxAmount = calculatePersentValue(gainCapital, 27);
+
+      infoBubble1.textContent = `Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.`
+      infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
+      infoBubble3.textContent = `Social security contribution amount is average since they depend on personal circumstances or choices.`
+      infoBubble4.textContent = `No special favourable treatment for stock options is available. Phantom or virtual share plans (VSOP) may sometimes achieve better tax results since income is taxed when payment is received instead of taxation of estimated value of shares at the moment of vesting or exercise (so-called "dry income").`
+      taxReliefBubble.textContent = `Unfortunately there is no favourable tax treatment available.<br><br>Income of 3000 euros per employee per year is tax free if:<br>- if the shares are kept in deposit at the European Community bank determined by the employer and the representatives of the employees<br>- the shares are kept for at least 5 years after they where bought<br>- the employee proves every year that he still owns the shares.`
       
       break;
     case "estonia":
@@ -750,6 +756,14 @@ const outVsopPayment = document.getElementById('out-vsop-payment');
 const outVsopTaxPoint = document.getElementById('out-vsop-tax-point');
 const outVsopIncomeTaxes = document.getElementById('out-vsop-income-taxes');
 const outVsopSocialSecurity = document.getElementById('out-vsop-social-security');
+
+//text
+
+const infoBubble1 = document.getElementById('info-bubble-1');
+const infoBubble2 = document.getElementById('info-bubble-2');
+const infoBubble3 = document.getElementById('info-bubble-3');
+const infoBubble4 = document.getElementById('info-bubble-4');
+const taxReliefBubble = document.getElementById('tax-relief-bubble'); 
 
 exercisePriceField.addEventListener('input', (event) => {
   formatInputWithCommas(event.target);
