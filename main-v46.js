@@ -358,9 +358,11 @@ The Estonian Tax and Customs Board has to be notified of grant of the options, e
       infoBubble3.textContent = `Social security contribution amount is average since they depend on personal circumstances or choices. Church tax and solidarity surcharge is not included.`
       infoBubble4.textContent = `A favourable tax treatment is available. Check the box to see result.`
       taxReliefBubble.innerHTML = `Favourable tax rules are available for start-ups and small companies which:
-<br>- employ less than 250 employees
-<br>- annual turnover is less than 50 MEUR and balance sheet maximum of 43 MEUR
-<br>- less than 12 years old at the time of employee participation`
+      <ul role="list" class="tax-treatment-bubble_list">
+      	<li>employ less than 250 employees</li>
+        <li>annual turnover is less than 50 MEUR and balance sheet maximum of 43 MEUR</li>
+        <li>less than 12 years old at the time of employee participation</li>
+      </ul>`
       
       break;
     case "latvia":
@@ -581,7 +583,9 @@ The Estonian Tax and Customs Board has to be notified of grant of the options, e
       taxReliefBubble.innerHTML = `No special treatment for ESOP plans.
 <br>
 <br>New tax rules for stock options apply from 1 January 2023:
-<br>- The tax point is at the exercise if the shares become tradable, i.e. the owner is able to sell the shares to any other person.`
+<ul role="list" class="tax-treatment-bubble_list">
+	<li>The tax point is at the exercise if the shares become tradable, i.e. the owner is able to sell the shares to any other person.</li>
+</ul>`
       
       break;
     case "czechia":
@@ -761,8 +765,11 @@ The Estonian Tax and Customs Board has to be notified of grant of the options, e
       infoBubble3.textContent = `Social security contribution amount is average since they depend on personal circumstances or choices.`
       infoBubble4.textContent = `A favourable tax treatment is available, which allows postponing taxation from exercise to sale. Check the box to see result.`
       taxReliefBubble.innerHTML = `The issuer of the shares is a joint stock company.
+<br>
 <br>The company is based in Poland or in another EU or EEA country, or in the country with which Poland has a tax treaty.
+<br>
 <br>Awards are granted based on the shareholders resolution.
+<br>
 <br>Tax advantage applies to incentive plans that correspond to the definition in the Polish income tax law.`
       
       break;
@@ -814,7 +821,9 @@ The Estonian Tax and Customs Board has to be notified of grant of the options, e
       infoBubble3.textContent = ``
       infoBubble4.textContent = ``
       taxReliefBubble.innerHTML = `There is no special tax treatment for employee stock options. Stock options are considered taxable benefits from the employer.
+<br>
 <br>Double taxation of the same income at exercise and sale might occur.
+<br>
 <br>Sale of share is tax free if the shares are held for 2+ years.`
       
       break;
@@ -870,8 +879,11 @@ The Estonian Tax and Customs Board has to be notified of grant of the options, e
       infoBubble3.textContent = `A favourable tax treatment is available. Check the box to see result.`
       infoBubble4.textContent = ``
       taxReliefBubble.innerHTML = `There must be at least 1 year between the grant and exercise of the share options.
+<br>
 <br>Employees and directors are eligible. Contractors and other collaborators are not.
+<br>
 <br>ESOP should be implemented by the same company which shares are offered.
+<br>
 <br>Health insurance (10%) is due on capital gains between 6 and 12 minimum gross salaries (3000 RON in 2023)`
       
       break;
@@ -923,6 +935,7 @@ The Estonian Tax and Customs Board has to be notified of grant of the options, e
       infoBubble3.textContent = ``
       infoBubble4.textContent = ``
       taxReliefBubble.innerHTML = `Unfortunately there is no favourable tax treatment available.
+<br>
 <br>Double taxation of the same income at exercise and sale might occur.`
       
       break;
