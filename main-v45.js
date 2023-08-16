@@ -175,10 +175,13 @@ const calculateTax = () => {
       infoBubble4.textContent = `No special favourable treatment for stock options is available. Phantom or virtual share plans (VSOP) may sometimes achieve better tax results since income is taxed when payment is received instead of taxation of estimated value of shares at the moment of vesting or exercise (so-called "dry income").`
       taxReliefBubble.innerHTML = `Unfortunately there is no favourable tax treatment available.
       <br>
+      <br>
       Income of 3000 euros per employee per year is tax free if:
-      <br>- if the shares are kept in deposit at the European Community bank determined by the employer and the representatives of the employees
-      <br>- the shares are kept for at least 5 years after they where bought
-      <br>- the employee proves every year that he still owns the shares.`
+      <ul role="list" class="tax-treatment-bubble_list">
+      	<li>if the shares are kept in deposit at the European Community bank determined by the employer and the representatives of the employees</li>
+        <li>the shares are kept for at least 5 years after they where bought</li>
+        <li>the employee proves every year that he still owns the shares.</li>
+      </ul>`
       
       break;
     case "estonia":
@@ -227,8 +230,12 @@ const calculateTax = () => {
       infoBubble3.textContent = `A favourable tax treatment is available, which allows postponing taxation from exercise to sale. Check the box to see result.`
       infoBubble4.textContent = ``
       taxReliefBubble.innerHTML = `There must be at least 3 years between the grant and exercise of the share options.
-<br>The 3 years starts from the date both parties have signed the agreement.
-<br>The Estonian Tax and Customs Board has to be notified of grant of the options, except if the grant agreement is signed digitally.
+<br>
+<br>
+The 3 years starts from the date both parties have signed the agreement.
+<br>
+<br>
+The Estonian Tax and Customs Board has to be notified of grant of the options, except if the grant agreement is signed digitally.
 `
       
       break;
@@ -283,6 +290,7 @@ const calculateTax = () => {
       infoBubble3.textContent = ``
       infoBubble4.textContent = ``
       taxReliefBubble.innerHTML = `Unfortunately there is no favourable tax treatment available.
+<br>
 <br>Sale of shares is generally tax free unless you sell shares in a company that holds immovable property in Cyprus.`
       
       break;
@@ -406,7 +414,9 @@ const calculateTax = () => {
       infoBubble3.textContent = `A favourable tax treatment is available, which allows postponing taxation from exercise to sale. Check the box to see result.`
       infoBubble4.textContent = ``
       taxReliefBubble.innerHTML = `There must be at least 1 year between the grant and exercise of the share options.
+<br>
 <br>During the options are held, the optionholder must be employed by the company
+<br>
 <br>Grant of options must be notified to the Latvian State Revenue service within 2 months.`
       
       break;
@@ -512,7 +522,9 @@ const calculateTax = () => {
       infoBubble3.textContent = ``
       infoBubble4.textContent = ``
       taxReliefBubble.innerHTML = `Only company and group company employees are eligible.
+<br>
 <br>Benefit on the exercise is taxed with income tax of 15%. Progressive rates do not apply. No social security contributions.
+<br>
 <br>Company has to collect and keep the records to be able to prove correct valuation of fringe benefits.`
 		  
       break;
@@ -567,6 +579,7 @@ const calculateTax = () => {
       infoBubble3.textContent = `Social security contribution amount is approximate since they are capped and depend on the exact amount of salary.`
       infoBubble4.textContent = `In general, capital gains on the disposal of shares are not taxed.`
       taxReliefBubble.innerHTML = `No special treatment for ESOP plans.
+<br>
 <br>New tax rules for stock options apply from 1 January 2023:
 <br>- The tax point is at the exercise if the shares become tradable, i.e. the owner is able to sell the shares to any other person.`
       
@@ -622,6 +635,7 @@ const calculateTax = () => {
       infoBubble3.textContent = `No special favourable treatment for stock options is available. Phantom or virtual share plans (VSOP) may sometimes achieve better tax results since income is taxed when payment is received instead of taxation of estimated value of shares at the moment of vesting or exercise (so-called "dry income").`
       infoBubble4.textContent = ``
       taxReliefBubble.innerHTML = `Unfortunately there is no favourable tax treatment available.
+<br>
 <br>Sale of share is tax free if the shares are held for 3+ years.`
       
       break;
@@ -680,12 +694,19 @@ const calculateTax = () => {
       infoBubble3.textContent = `Social security contributions are not included since they are almost nonexistent or depend on personal choices. Municipal tax and labour market tax are included.`
       infoBubble4.textContent = `A favourable tax treatment is available, which allows postponing taxation from exercise to sale. Check the box to see result.`
       taxReliefBubble.innerHTML = `Favourable tax rules apply to individual share-based remuneration plans ("section 7P" scheme).
+<br>
 <br>Only employees are eligible. Cannot be applied to contractors, board members etc
+<br>
 <br>Shares should be issued by the employer or the group company
+<br>
 <br>Employee shares cannot constitute a separate class of shares
+<br>
 <br>Allocated options cannot be assigned to anyone else
+<br>
 <br>Allocation must not exceed 10% of the annual salary. Exceptions apply to start-ups and if plan is offered to 80% of the employees
+<br>
 <br>Grant of options needs to be reported to the Tax Agency
+<br>
 <br>Favourable tax treatment can be applied to directly acquired shares, purchase options and subscription rights.`
       
       break;
