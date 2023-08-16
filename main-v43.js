@@ -174,12 +174,12 @@ const calculateTax = () => {
       infoBubble3.textContent = `Social security contribution amount is average since they depend on personal circumstances or choices.`
       infoBubble4.textContent = `No special favourable treatment for stock options is available. Phantom or virtual share plans (VSOP) may sometimes achieve better tax results since income is taxed when payment is received instead of taxation of estimated value of shares at the moment of vesting or exercise (so-called "dry income").`
       taxReliefBubble.innerHTML = `Unfortunately there is no favourable tax treatment available.
-      <br />
-      <br />
+      <br>
+      <br>
       Income of 3000 euros per employee per year is tax free if:
-      <br />- if the shares are kept in deposit at the European Community bank determined by the employer and the representatives of the employees
-      <br />- the shares are kept for at least 5 years after they where bought
-      <br />- the employee proves every year that he still owns the shares.`
+      <br>- if the shares are kept in deposit at the European Community bank determined by the employer and the representatives of the employees
+      <br>- the shares are kept for at least 5 years after they where bought
+      <br>- the employee proves every year that he still owns the shares.`
       
       break;
     case "estonia":
@@ -218,10 +218,10 @@ const calculateTax = () => {
       
       taxAmount = calculatePersentValue(gainCapital, 20);
 
-      moreButtonExercisePrice.style.display = 'inline';
-      moreButtonValueOfShares.style.display = 'inline';
-      moreButtonSalePrice.style.display = 'inline';
-      moreButtonAnnualIncome.style.display = 'none';
+      // moreButtonExercisePrice.style.display = 'inline';
+      // moreButtonValueOfShares.style.display = 'inline';
+      // moreButtonSalePrice.style.display = 'inline';
+      // moreButtonAnnualIncome.style.display = 'none';
 
       infoBubble1.textContent = `Personal deductions are not included.If the deductions were included, the tax bill would normally be less, not more.`
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
@@ -274,10 +274,10 @@ The Estonian Tax and Customs Board has to be notified of grant of the options, e
 
       // TEXT IN BUBBLE
 
-      moreButtonExercisePrice.style.display = 'inline';
-      moreButtonValueOfShares.style.display = 'inline';
-      moreButtonSalePrice.style.display = 'none';
-      moreButtonAnnualIncome.style.display = 'none';
+      // moreButtonExercisePrice.style.display = 'inline';
+      // moreButtonValueOfShares.style.display = 'inline';
+      // moreButtonSalePrice.style.display = 'none';
+      // moreButtonAnnualIncome.style.display = 'none';
 
       infoBubble1.textContent = `Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.`
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
@@ -341,10 +341,10 @@ Sale of shares is generally tax free unless you sell shares in a company that ho
 		  
       // TEXT IN BUBBLE
 
-      moreButtonExercisePrice.style.display = 'inline';
-      moreButtonValueOfShares.style.display = 'inline';
-      moreButtonSalePrice.style.display = 'inline';
-      moreButtonAnnualIncome.style.display = 'inline';
+      // moreButtonExercisePrice.style.display = 'inline';
+      // moreButtonValueOfShares.style.display = 'inline';
+      // moreButtonSalePrice.style.display = 'inline';
+      // moreButtonAnnualIncome.style.display = 'inline';
 
       infoBubble1.textContent = `Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.`
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
@@ -398,10 +398,10 @@ Sale of shares is generally tax free unless you sell shares in a company that ho
 
       // TEXT IN BUBBLE
 
-      moreButtonExercisePrice.style.display = 'inline';
-      moreButtonValueOfShares.style.display = 'inline';
-      moreButtonSalePrice.style.display = 'inline';
-      moreButtonAnnualIncome.style.display = 'none';
+      // moreButtonExercisePrice.style.display = 'inline';
+      // moreButtonValueOfShares.style.display = 'inline';
+      // moreButtonSalePrice.style.display = 'inline';
+      // moreButtonAnnualIncome.style.display = 'none';
 
       infoBubble1.textContent = `Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.`
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
@@ -457,10 +457,10 @@ Grant of options must be notified to the Latvian State Revenue service within 2 
 
       // TEXT IN BUBBLE
 
-      moreButtonExercisePrice.style.display = 'inline';
-      moreButtonValueOfShares.style.display = 'inline';
-      moreButtonSalePrice.style.display = 'inline';
-      moreButtonAnnualIncome.style.display = 'inline';
+      // moreButtonExercisePrice.style.display = 'inline';
+      // moreButtonValueOfShares.style.display = 'inline';
+      // moreButtonSalePrice.style.display = 'inline';
+      // moreButtonAnnualIncome.style.display = 'inline';
 
       infoBubble1.textContent = `Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.`
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
@@ -504,10 +504,10 @@ Grant of options must be notified to the Latvian State Revenue service within 2 
 
       // TEXT IN BUBBLE
 
-      moreButtonExercisePrice.style.display = 'inline';
-      moreButtonValueOfShares.style.display = 'inline';
-      moreButtonSalePrice.style.display = 'none';
-      moreButtonAnnualIncome.style.display = 'none';
+      // moreButtonExercisePrice.style.display = 'inline';
+      // moreButtonValueOfShares.style.display = 'inline';
+      // moreButtonSalePrice.style.display = 'none';
+      // moreButtonAnnualIncome.style.display = 'none';
 
       infoBubble1.textContent = `Personal deductions are not included.If the deductions were included, the tax bill would normally be less, not more.`
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
@@ -559,10 +559,10 @@ Company has to collect and keep the records to be able to prove correct valuatio
 
       // TEXT IN BUBBLE
 
-      moreButtonExercisePrice.style.display = 'inline';
-      moreButtonValueOfShares.style.display = 'inline';
-      moreButtonSalePrice.style.display = 'inline';
-      moreButtonAnnualIncome.style.display = 'inline';
+      // moreButtonExercisePrice.style.display = 'inline';
+      // moreButtonValueOfShares.style.display = 'inline';
+      // moreButtonSalePrice.style.display = 'inline';
+      // moreButtonAnnualIncome.style.display = 'inline';
 
       infoBubble1.textContent = `Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.`
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
@@ -614,10 +614,10 @@ New tax rules for stock options apply from 1 January 2023:
 
       // TEXT IN BUBBLE
 
-      moreButtonExercisePrice.style.display = 'inline';
-      moreButtonValueOfShares.style.display = 'inline';
-      moreButtonSalePrice.style.display = 'inline';
-      moreButtonAnnualIncome.style.display = 'none';
+      // moreButtonExercisePrice.style.display = 'inline';
+      // moreButtonValueOfShares.style.display = 'inline';
+      // moreButtonSalePrice.style.display = 'inline';
+      // moreButtonAnnualIncome.style.display = 'none';
 
       infoBubble1.textContent = `Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.`
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
@@ -672,10 +672,10 @@ Sale of share is tax free if the shares are held for 3+ years.`
 
       // TEXT IN BUBBLE
 
-      moreButtonExercisePrice.style.display = 'inline';
-      moreButtonValueOfShares.style.display = 'inline';
-      moreButtonSalePrice.style.display = 'inline';
-      moreButtonAnnualIncome.style.display = 'inline';
+      // moreButtonExercisePrice.style.display = 'inline';
+      // moreButtonValueOfShares.style.display = 'inline';
+      // moreButtonSalePrice.style.display = 'inline';
+      // moreButtonAnnualIncome.style.display = 'inline';
 
       infoBubble1.textContent = `Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.`
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
@@ -732,10 +732,10 @@ Favourable tax treatment can be applied to directly acquired shares, purchase op
 
       // TEXT IN BUBBLE
 
-      moreButtonExercisePrice.style.display = 'inline';
-      moreButtonValueOfShares.style.display = 'inline';
-      moreButtonSalePrice.style.display = 'inline';
-      moreButtonAnnualIncome.style.display = 'inline';
+      // moreButtonExercisePrice.style.display = 'inline';
+      // moreButtonValueOfShares.style.display = 'inline';
+      // moreButtonSalePrice.style.display = 'inline';
+      // moreButtonAnnualIncome.style.display = 'inline';
 
       infoBubble1.textContent = `Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.`
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
@@ -785,10 +785,10 @@ Tax advantage applies to incentive plans that correspond to the definition in th
 
       // TEXT IN BUBBLE
 
-      moreButtonExercisePrice.style.display = 'inline';
-      moreButtonValueOfShares.style.display = 'inline';
-      moreButtonSalePrice.style.display = 'none';
-      moreButtonAnnualIncome.style.display = 'none';
+      // moreButtonExercisePrice.style.display = 'inline';
+      // moreButtonValueOfShares.style.display = 'inline';
+      // moreButtonSalePrice.style.display = 'none';
+      // moreButtonAnnualIncome.style.display = 'none';
 
       infoBubble1.textContent = `Personal deductions are not included.If the deductions were included, the tax bill would normally be less, not more.`
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
@@ -841,10 +841,10 @@ Sale of share is tax free if the shares are held for 2+ years.`
 
       // TEXT IN BUBBLE
 
-      moreButtonExercisePrice.style.display = 'inline';
-      moreButtonValueOfShares.style.display = 'inline';
-      moreButtonSalePrice.style.display = 'inline';
-      moreButtonAnnualIncome.style.display = 'none';
+      // moreButtonExercisePrice.style.display = 'inline';
+      // moreButtonValueOfShares.style.display = 'inline';
+      // moreButtonSalePrice.style.display = 'inline';
+      // moreButtonAnnualIncome.style.display = 'none';
 
       infoBubble1.textContent = `Personal deductions are not included.If the deductions were included, the tax bill would normally be less, not more.`
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
@@ -894,10 +894,10 @@ Health insurance (10%) is due on capital gains between 6 and 12 minimum gross sa
 
       // TEXT IN BUBBLE
 
-      moreButtonExercisePrice.style.display = 'inline';
-      moreButtonValueOfShares.style.display = 'inline';
-      moreButtonSalePrice.style.display = 'none';
-      moreButtonAnnualIncome.style.display = 'none';
+      // moreButtonExercisePrice.style.display = 'inline';
+      // moreButtonValueOfShares.style.display = 'inline';
+      // moreButtonSalePrice.style.display = 'none';
+      // moreButtonAnnualIncome.style.display = 'none';
 
       infoBubble1.textContent = `Personal deductions are not included.If the deductions were included, the tax bill would normally be less, not more.`
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
