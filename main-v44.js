@@ -175,7 +175,6 @@ const calculateTax = () => {
       infoBubble4.textContent = `No special favourable treatment for stock options is available. Phantom or virtual share plans (VSOP) may sometimes achieve better tax results since income is taxed when payment is received instead of taxation of estimated value of shares at the moment of vesting or exercise (so-called "dry income").`
       taxReliefBubble.innerHTML = `Unfortunately there is no favourable tax treatment available.
       <br>
-      <br>
       Income of 3000 euros per employee per year is tax free if:
       <br>- if the shares are kept in deposit at the European Community bank determined by the employer and the representatives of the employees
       <br>- the shares are kept for at least 5 years after they where bought
@@ -227,9 +226,9 @@ const calculateTax = () => {
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = `A favourable tax treatment is available, which allows postponing taxation from exercise to sale. Check the box to see result.`
       infoBubble4.textContent = ``
-      taxReliefBubble.textContent = `There must be at least 3 years between the grant and exercise of the share options.
-The 3 years starts from the date both parties have signed the agreement.
-The Estonian Tax and Customs Board has to be notified of grant of the options, except if the grant agreement is signed digitally.
+      taxReliefBubble.innerHTML = `There must be at least 3 years between the grant and exercise of the share options.
+<br>The 3 years starts from the date both parties have signed the agreement.
+<br>The Estonian Tax and Customs Board has to be notified of grant of the options, except if the grant agreement is signed digitally.
 `
       
       break;
@@ -283,8 +282,8 @@ The Estonian Tax and Customs Board has to be notified of grant of the options, e
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = ``
       infoBubble4.textContent = ``
-      taxReliefBubble.textContent = `Unfortunately there is no favourable tax treatment available.
-Sale of shares is generally tax free unless you sell shares in a company that holds immovable property in Cyprus.`
+      taxReliefBubble.innerHTML = `Unfortunately there is no favourable tax treatment available.
+<br>Sale of shares is generally tax free unless you sell shares in a company that holds immovable property in Cyprus.`
       
       break;
     case "germany":
@@ -350,11 +349,10 @@ Sale of shares is generally tax free unless you sell shares in a company that ho
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = `Social security contribution amount is average since they depend on personal circumstances or choices. Church tax and solidarity surcharge is not included.`
       infoBubble4.textContent = `A favourable tax treatment is available. Check the box to see result.`
-      taxReliefBubble.textContent = `Favourable tax rules are available for start-ups and small companies which:
-      
-- employ less than 250 employees
-- annual turnover is less than 50 MEUR and balance sheet maximum of 43 MEUR
-- less than 12 years old at the time of employee participation`
+      taxReliefBubble.innerHTML = `Favourable tax rules are available for start-ups and small companies which:
+<br>- employ less than 250 employees
+<br>- annual turnover is less than 50 MEUR and balance sheet maximum of 43 MEUR
+<br>- less than 12 years old at the time of employee participation`
       
       break;
     case "latvia":
@@ -407,9 +405,9 @@ Sale of shares is generally tax free unless you sell shares in a company that ho
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = `A favourable tax treatment is available, which allows postponing taxation from exercise to sale. Check the box to see result.`
       infoBubble4.textContent = ``
-      taxReliefBubble.textContent = `There must be at least 1 year between the grant and exercise of the share options.
-During the options are held, the optionholder must be employed by the company
-Grant of options must be notified to the Latvian State Revenue service within 2 months.`
+      taxReliefBubble.innerHTML = `There must be at least 1 year between the grant and exercise of the share options.
+<br>During the options are held, the optionholder must be employed by the company
+<br>Grant of options must be notified to the Latvian State Revenue service within 2 months.`
       
       break;
     case "lithuania":
@@ -466,7 +464,7 @@ Grant of options must be notified to the Latvian State Revenue service within 2 
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = `Social security contribution amount is average since they depend on personal circumstances or choices.`
       infoBubble4.textContent = `A favourable tax treatment is available, which allows postponing taxation from exercise to sale. Check the box to see result.`
-      taxReliefBubble.textContent = `There must be at least 3 years between the grant and exercise of the share options.`
+      taxReliefBubble.innerHTML = `There must be at least 3 years between the grant and exercise of the share options.`
       
       break;
     case "malta":
@@ -513,9 +511,9 @@ Grant of options must be notified to the Latvian State Revenue service within 2 
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = ``
       infoBubble4.textContent = ``
-      taxReliefBubble.textContent = `Only company and group company employees are eligible.
-Benefit on the exercise is taxed with income tax of 15%. Progressive rates do not apply. No social security contributions.
-Company has to collect and keep the records to be able to prove correct valuation of fringe benefits.`
+      taxReliefBubble.innerHTML = `Only company and group company employees are eligible.
+<br>Benefit on the exercise is taxed with income tax of 15%. Progressive rates do not apply. No social security contributions.
+<br>Company has to collect and keep the records to be able to prove correct valuation of fringe benefits.`
 		  
       break;
     case "netherlands":
@@ -568,9 +566,9 @@ Company has to collect and keep the records to be able to prove correct valuatio
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = `Social security contribution amount is approximate since they are capped and depend on the exact amount of salary.`
       infoBubble4.textContent = `In general, capital gains on the disposal of shares are not taxed.`
-      taxReliefBubble.textContent = `No special treatment for ESOP plans.
-New tax rules for stock options apply from 1 January 2023:
-- The tax point is at the exercise if the shares become tradable, i.e. the owner is able to sell the shares to any other person.`
+      taxReliefBubble.innerHTML = `No special treatment for ESOP plans.
+<br>New tax rules for stock options apply from 1 January 2023:
+<br>- The tax point is at the exercise if the shares become tradable, i.e. the owner is able to sell the shares to any other person.`
       
       break;
     case "czechia":
@@ -623,8 +621,8 @@ New tax rules for stock options apply from 1 January 2023:
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = `No special favourable treatment for stock options is available. Phantom or virtual share plans (VSOP) may sometimes achieve better tax results since income is taxed when payment is received instead of taxation of estimated value of shares at the moment of vesting or exercise (so-called "dry income").`
       infoBubble4.textContent = ``
-      taxReliefBubble.textContent = `Unfortunately there is no favourable tax treatment available.
-Sale of share is tax free if the shares are held for 3+ years.`
+      taxReliefBubble.innerHTML = `Unfortunately there is no favourable tax treatment available.
+<br>Sale of share is tax free if the shares are held for 3+ years.`
       
       break;
     case "denmark":
@@ -681,14 +679,14 @@ Sale of share is tax free if the shares are held for 3+ years.`
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = `Social security contributions are not included since they are almost nonexistent or depend on personal choices. Municipal tax and labour market tax are included.`
       infoBubble4.textContent = `A favourable tax treatment is available, which allows postponing taxation from exercise to sale. Check the box to see result.`
-      taxReliefBubble.textContent = `Favourable tax rules apply to individual share-based remuneration plans ("section 7P" scheme).
-Only employees are eligible. Cannot be applied to contractors, board members etc
-Shares should be issued by the employer or the group company
-Employee shares cannot constitute a separate class of shares
-Allocated options cannot be assigned to anyone else
-Allocation must not exceed 10% of the annual salary. Exceptions apply to start-ups and if plan is offered to 80% of the employees
-Grant of options needs to be reported to the Tax Agency
-Favourable tax treatment can be applied to directly acquired shares, purchase options and subscription rights.`
+      taxReliefBubble.innerHTML = `Favourable tax rules apply to individual share-based remuneration plans ("section 7P" scheme).
+<br>Only employees are eligible. Cannot be applied to contractors, board members etc
+<br>Shares should be issued by the employer or the group company
+<br>Employee shares cannot constitute a separate class of shares
+<br>Allocated options cannot be assigned to anyone else
+<br>Allocation must not exceed 10% of the annual salary. Exceptions apply to start-ups and if plan is offered to 80% of the employees
+<br>Grant of options needs to be reported to the Tax Agency
+<br>Favourable tax treatment can be applied to directly acquired shares, purchase options and subscription rights.`
       
       break;
     case "poland":
@@ -741,10 +739,10 @@ Favourable tax treatment can be applied to directly acquired shares, purchase op
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = `Social security contribution amount is average since they depend on personal circumstances or choices.`
       infoBubble4.textContent = `A favourable tax treatment is available, which allows postponing taxation from exercise to sale. Check the box to see result.`
-      taxReliefBubble.textContent = `The issuer of the shares is a joint stock company.
-The company is based in Poland or in another EU or EEA country, or in the country with which Poland has a tax treaty.
-Awards are granted based on the shareholders resolution.
-Tax advantage applies to incentive plans that correspond to the definition in the Polish income tax law.`
+      taxReliefBubble.innerHTML = `The issuer of the shares is a joint stock company.
+<br>The company is based in Poland or in another EU or EEA country, or in the country with which Poland has a tax treaty.
+<br>Awards are granted based on the shareholders resolution.
+<br>Tax advantage applies to incentive plans that correspond to the definition in the Polish income tax law.`
       
       break;
     case "georgia":
@@ -794,9 +792,9 @@ Tax advantage applies to incentive plans that correspond to the definition in th
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = ``
       infoBubble4.textContent = ``
-      taxReliefBubble.textContent = `There is no special tax treatment for employee stock options. Stock options are considered taxable benefits from the employer.
-Double taxation of the same income at exercise and sale might occur.
-Sale of share is tax free if the shares are held for 2+ years.`
+      taxReliefBubble.innerHTML = `There is no special tax treatment for employee stock options. Stock options are considered taxable benefits from the employer.
+<br>Double taxation of the same income at exercise and sale might occur.
+<br>Sale of share is tax free if the shares are held for 2+ years.`
       
       break;
     case "romania":
@@ -850,10 +848,10 @@ Sale of share is tax free if the shares are held for 2+ years.`
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = `A favourable tax treatment is available. Check the box to see result.`
       infoBubble4.textContent = ``
-      taxReliefBubble.textContent = `There must be at least 1 year between the grant and exercise of the share options.
-Employees and directors are eligible. Contractors and other collaborators are not.
-ESOP should be implemented by the same company which shares are offered.
-Health insurance (10%) is due on capital gains between 6 and 12 minimum gross salaries (3000 RON in 2023)`
+      taxReliefBubble.innerHTML = `There must be at least 1 year between the grant and exercise of the share options.
+<br>Employees and directors are eligible. Contractors and other collaborators are not.
+<br>ESOP should be implemented by the same company which shares are offered.
+<br>Health insurance (10%) is due on capital gains between 6 and 12 minimum gross salaries (3000 RON in 2023)`
       
       break;
     case "ukraine":
@@ -903,8 +901,8 @@ Health insurance (10%) is due on capital gains between 6 and 12 minimum gross sa
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = ``
       infoBubble4.textContent = ``
-      taxReliefBubble.textContent = `Unfortunately there is no favourable tax treatment available.
-Double taxation of the same income at exercise and sale might occur.`
+      taxReliefBubble.innerHTML = `Unfortunately there is no favourable tax treatment available.
+<br>Double taxation of the same income at exercise and sale might occur.`
       
       break;
     default:
