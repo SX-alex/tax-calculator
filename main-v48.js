@@ -169,10 +169,11 @@ const calculateTax = () => {
       
       taxAmount = calculatePersentValue(gainCapital, 27);
 
-      infoBubble1.textContent = `Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.`
-      infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
-      infoBubble3.textContent = `Social security contribution amount is average since they depend on personal circumstances or choices.`
-      infoBubble4.textContent = `No special favourable treatment for stock options is available. Phantom or virtual share plans (VSOP) may sometimes achieve better tax results since income is taxed when payment is received instead of taxation of estimated value of shares at the moment of vesting or exercise (so-called "dry income").`
+      taxTipsBody.textContent = `
+      <div>Tax rates are for 2023. They may change in the future.</div>
+      <div>Personal deductions are not included. If the deductions were included, the tax bill would normally be less, not more.</div>
+      <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
+      `
       treatmentBody.innerHTML = `
       <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
 	      <li>Unfortunately there is no favourable tax treatment available.</li>
@@ -227,10 +228,11 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'inline';
       // moreButtonAnnualIncome.style.display = 'none';
 
-      infoBubble1.textContent = `Personal deductions are not included.If the deductions were included, the tax bill would normally be less, not more.`
-      infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
-      infoBubble3.textContent = `A favourable tax treatment is available, which allows postponing taxation from exercise to sale. Check the box to see result.`
-      infoBubble4.textContent = ``
+      taxTipsBody.textContent = `
+      <div>Tax rates are for 2023. They may change in the future.</div>
+      <div>Personal deductions are not included. If the deductions were included, the tax bill would normally be less, not more.</div>
+      <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
+      `
       treatmentBody.innerHTML = `
       <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
 	      <li>There must be at least 3 years between the grant and exercise of the share options.</li>
@@ -285,10 +287,11 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'none';
       // moreButtonAnnualIncome.style.display = 'none';
 
-      infoBubble1.textContent = `Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.`
-      infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
-      infoBubble3.textContent = ``
-      infoBubble4.textContent = ``
+      taxTipsBody.textContent = `
+      <div>Tax rates are for 2023. They may change in the future.</div>
+      <div>Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.</div>
+      <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
+      `
       treatmentBody.innerHTML = `
       <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
 	      <li>Unfortunately there is no favourable tax treatment available.</li>
@@ -355,10 +358,12 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'inline';
       // moreButtonAnnualIncome.style.display = 'inline';
 
-      infoBubble1.textContent = `Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.`
-      infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
-      infoBubble3.textContent = `Social security contribution amount is average since they depend on personal circumstances or choices. Church tax and solidarity surcharge is not included.`
-      infoBubble4.textContent = `A favourable tax treatment is available. Check the box to see result.`
+      taxTipsBody.textContent = `
+      <div>Tax rates are for 2023. They may change in the future.</div>
+      <div>Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.</div>
+      <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
+      <div>Social security contribution amount is average since it depends on personal circumstances or choices. Church tax and solidarity surcharge are not included.</div>
+      `
       treatmentBody.innerHTML = `
       <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
 	      <li>Favourable tax rules are available for start-ups and small companies which:
@@ -424,10 +429,11 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'inline';
       // moreButtonAnnualIncome.style.display = 'none';
 
-      infoBubble1.textContent = `Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.`
-      infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
-      infoBubble3.textContent = `A favourable tax treatment is available, which allows postponing taxation from exercise to sale. Check the box to see result.`
-      infoBubble4.textContent = ``
+      taxTipsBody.textContent = `
+      <div>Tax rates are for 2023. They may change in the future.</div>
+      <div>Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.</div>
+      <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
+      `
       treatmentBody.innerHTML = `
       <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
 	      <li>There must be at least 1 year between the grant and exercise of the share options.</li>
@@ -486,12 +492,14 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'inline';
       // moreButtonAnnualIncome.style.display = 'inline';
 
-      infoBubble1.textContent = `Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.`
-      infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
-      infoBubble3.textContent = `Social security contribution amount is average since they depend on personal circumstances or choices.`
-      infoBubble4.textContent = `A favourable tax treatment is available, which allows postponing taxation from exercise to sale. Check the box to see result.`
+      taxTipsBody.textContent = `
+      <div>Tax rates are for 2023. They may change in the future. </div>
+      <div>Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.</div>
+      <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
+      <div>Social security contribution amount is average since it depends on personal circumstances or choices.</div>
+      `
       treatmentBody.innerHTML = `
-      <div class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
+      <div class="text is--color-neutral-900 is--caption is--regular">
 	      There must be at least 3 years between the grant and exercise of the share options.
       </div>`
       
@@ -536,10 +544,11 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'none';
       // moreButtonAnnualIncome.style.display = 'none';
 
-      infoBubble1.textContent = `Personal deductions are not included.If the deductions were included, the tax bill would normally be less, not more.`
-      infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
-      infoBubble3.textContent = ``
-      infoBubble4.textContent = ``
+      taxTipsBody.textContent = `
+      <div>Tax rates are for 2023. They may change in the future.</div>
+      <div>Personal deductions are not included.If the deductions were included, the tax bill would normally be less, not more.</div>
+      <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
+      `
       treatmentBody.innerHTML = `
       <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
 	      <li>Only company and group company employees can participate.</li>
@@ -594,10 +603,12 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'inline';
       // moreButtonAnnualIncome.style.display = 'inline';
 
-      infoBubble1.textContent = `Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.`
-      infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
-      infoBubble3.textContent = `Social security contribution amount is approximate since they are capped and depend on the exact amount of salary.`
-      infoBubble4.textContent = `In general, capital gains on the disposal of shares are not taxed.`
+      taxTipsBody.textContent = `
+      <div>Tax rates are for 2023. They may change in the future.</div>
+      <div>Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.</div>
+      <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
+      <div>Social security contributions amount is approximate since the payments are capped depending on the exact amount of salary.</div>
+      `
       treatmentBody.innerHTML = `
       <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
       	      <li>No special treatment for ESOP plans.</li>
@@ -655,10 +666,11 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'inline';
       // moreButtonAnnualIncome.style.display = 'none';
 
-      infoBubble1.textContent = `Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.`
-      infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
-      infoBubble3.textContent = `No special favourable treatment for stock options is available. Phantom or virtual share plans (VSOP) may sometimes achieve better tax results since income is taxed when payment is received instead of taxation of estimated value of shares at the moment of vesting or exercise (so-called "dry income").`
-      infoBubble4.textContent = ``
+      taxTipsBody.textContent = `
+      <div>Tax rates are for 2023. They may change in the future. </div>
+      <div>Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.</div>
+      <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
+      `
       treatmentBody.innerHTML = `
       <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
 	      <li>Unfortunately there is no favourable tax treatment available.</li>
@@ -716,10 +728,12 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'inline';
       // moreButtonAnnualIncome.style.display = 'inline';
 
-      infoBubble1.textContent = `Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.`
-      infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
-      infoBubble3.textContent = `Social security contributions are not included since they are almost nonexistent or depend on personal choices. Municipal tax and labour market tax are included.`
-      infoBubble4.textContent = `A favourable tax treatment is available, which allows postponing taxation from exercise to sale. Check the box to see result.`
+      taxTipsBody.textContent = `
+      <div>Tax rates are for 2023. They may change in the future. </div>
+      <div>Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.</div>
+      <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
+      <div>Social security contributions are not included since they are almost nonexistent or depend on personal choices. Municipal tax and labour market tax are included.</div>
+      `
       treatmentBody.innerHTML = `
       <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
 	      <li>Tax relief is available for individual share-based remuneration plans ("section 7P").</li>
@@ -778,10 +792,12 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'inline';
       // moreButtonAnnualIncome.style.display = 'inline';
 
-      infoBubble1.textContent = `Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.`
-      infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
-      infoBubble3.textContent = `Social security contribution amount is average since they depend on personal circumstances or choices.`
-      infoBubble4.textContent = `A favourable tax treatment is available, which allows postponing taxation from exercise to sale. Check the box to see result.`
+      taxTipsBody.textContent = `
+      <div>Tax rates are for 2023. They may change in the future. </div>
+      <div>Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.</div>
+      <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
+      <div>Social security contributions amount is average since it depends on personal circumstances or choices.</div>
+      `
       treatmentBody.innerHTML = `
       <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
 	<li>The issuer of the shares is a joint stock company.</li>
@@ -834,10 +850,11 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'none';
       // moreButtonAnnualIncome.style.display = 'none';
 
-      infoBubble1.textContent = `Personal deductions are not included.If the deductions were included, the tax bill would normally be less, not more.`
-      infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
-      infoBubble3.textContent = ``
-      infoBubble4.textContent = ``
+      taxTipsBody.textContent = `
+      <div>Tax rates are for 2023. They may change in the future. </div>
+      <div>Personal deductions are not included.If the deductions were included, the tax bill would normally be less, not more.</div>
+      <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
+      `
       treatmentBody.innerHTML = `
       <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
 	<li>There is no special tax treatment for employee stock options.</li>
@@ -894,10 +911,11 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'inline';
       // moreButtonAnnualIncome.style.display = 'none';
 
-      infoBubble1.textContent = `Personal deductions are not included.If the deductions were included, the tax bill would normally be less, not more.`
-      infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
-      infoBubble3.textContent = `A favourable tax treatment is available. Check the box to see result.`
-      infoBubble4.textContent = ``
+      taxTipsBody.textContent = `
+      <div>Tax rates are for 2023. They may change in the future. </div>
+      <div>Personal deductions are not included.If the deductions were included, the tax bill would normally be less, not more.</div>
+      <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
+      `
       treatmentBody.innerHTML = `
       <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
 	<li>There must be at least 1 year between the grant and exercise of the share options.</li>
@@ -950,10 +968,11 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'none';
       // moreButtonAnnualIncome.style.display = 'none';
 
-      infoBubble1.textContent = `Personal deductions are not included.If the deductions were included, the tax bill would normally be less, not more.`
-      infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
-      infoBubble3.textContent = ``
-      infoBubble4.textContent = ``
+      taxTipsBody.textContent = `
+      <div>Tax rates are for 2023. They may change in the future. </div>
+      <div>Personal deductions are not included.If the deductions were included, the tax bill would normally be less, not more.</div>
+      <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
+      `
       treatmentBody.innerHTML = `
       <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
 	<li>Unfortunately there is no favourable tax treatment available.</li>
@@ -1029,6 +1048,7 @@ const moreButtonSalePrice = document.getElementById('sale-price-more-button');
 const moreButtonAnnualIncome = document.getElementById('annual-income-more-button');
 
 //tips and treatment
+const taxTipsBody = document.getElementById('tax-tips-body');
 const treatmentBody = document.getElementById('treatment-body');
 
 exercisePriceField.addEventListener('input', (event) => {
