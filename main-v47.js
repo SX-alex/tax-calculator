@@ -173,14 +173,16 @@ const calculateTax = () => {
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = `Social security contribution amount is average since they depend on personal circumstances or choices.`
       infoBubble4.textContent = `No special favourable treatment for stock options is available. Phantom or virtual share plans (VSOP) may sometimes achieve better tax results since income is taxed when payment is received instead of taxation of estimated value of shares at the moment of vesting or exercise (so-called "dry income").`
-      taxReliefBubble.innerHTML = `Unfortunately there is no favourable tax treatment available.
-      <br>
-      <br>
-      Income of 3000 euros per employee per year is tax free if:
-      <ul role="list" class="tax-treatment-bubble_list">
-      	<li>if the shares are kept in deposit at the European Community bank determined by the employer and the representatives of the employees</li>
-        <li>the shares are kept for at least 5 years after they where bought</li>
-        <li>the employee proves every year that he still owns the shares.</li>
+      treatmentBody.innerHTML = `
+      <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
+	      <li>Unfortunately there is no favourable tax treatment available.</li>
+	      <li>Income of 3000 euros per employee per year is tax free if:
+	      <ul role="list" class="tax-treatment-sublist">
+	      	<li>if the shares are kept in deposit at the European Community bank determined by the employer and the representatives of the employees</li>
+	       	<li>the shares are kept for at least 5 years after they where bought</li>
+	 	<li>the employee proves every year that he still owns the shares.</li>
+	      </ul>
+	      </li>
       </ul>`
       
       break;
@@ -229,14 +231,12 @@ const calculateTax = () => {
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = `A favourable tax treatment is available, which allows postponing taxation from exercise to sale. Check the box to see result.`
       infoBubble4.textContent = ``
-      taxReliefBubble.innerHTML = `There must be at least 3 years between the grant and exercise of the share options.
-<br>
-<br>
-The 3 years starts from the date both parties have signed the agreement.
-<br>
-<br>
-The Estonian Tax and Customs Board has to be notified of grant of the options, except if the grant agreement is signed digitally.
-`
+      treatmentBody.innerHTML = `
+      <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
+	      <li>There must be at least 3 years between the grant and exercise of the share options.</li>
+	      <li>The 3 years starts from the date both parties have signed the agreement.</li>
+	      <li>Grant of the options has to be notified to the Estonian Tax and Customs Board, except if the time of grant can be proved by digital signature or other similar timestamp.</li>
+      </ul>`
       
       break;
     case "cyprus":
@@ -289,9 +289,11 @@ The Estonian Tax and Customs Board has to be notified of grant of the options, e
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = ``
       infoBubble4.textContent = ``
-      taxReliefBubble.innerHTML = `Unfortunately there is no favourable tax treatment available.
-<br>
-<br>Sale of shares is generally tax free unless you sell shares in a company that holds immovable property in Cyprus.`
+      treatmentBody.innerHTML = `
+      <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
+	      <li>Unfortunately there is no favourable tax treatment available.</li>
+	      <li>Sale of shares is generally tax free unless you sell shares in a company that holds immovable property in Cyprus.</li>
+      </ul>`
       
       break;
     case "germany":
@@ -357,11 +359,22 @@ The Estonian Tax and Customs Board has to be notified of grant of the options, e
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = `Social security contribution amount is average since they depend on personal circumstances or choices. Church tax and solidarity surcharge is not included.`
       infoBubble4.textContent = `A favourable tax treatment is available. Check the box to see result.`
-      taxReliefBubble.innerHTML = `Favourable tax rules are available for start-ups and small companies which:
-      <ul role="list" class="tax-treatment-bubble_list">
-      	<li>employ less than 250 employees</li>
-        <li>annual turnover is less than 50 MEUR and balance sheet maximum of 43 MEUR</li>
-        <li>less than 12 years old at the time of employee participation</li>
+      treatmentBody.innerHTML = `
+      <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
+	      <li>Favourable tax rules are available for start-ups and small companies which:
+		      <ul role="list" class="tax-treatment-sublist">
+		      	<li>employ less than 250 employees</li>
+		       	<li>annual turnover is less than 50 MEUR and balance sheet maximum of 43 MEUR</li>
+		 	<li>less than 12 years old at the time of employee participation</li>
+		      </ul>
+	      </li>
+       	      <li>Income tax on the share options of such companies can be deferred from exercise to the earliest of one of the following events:
+		      <ul role="list" class="tax-treatment-sublist">
+		      	<li>sale or transfer of shares</li>
+		       	<li>termination of employment agreement, or</li>
+		 	<li>12 years passed from exercise</li>
+		      </ul>
+	      </li>
       </ul>`
       
       break;
@@ -415,11 +428,12 @@ The Estonian Tax and Customs Board has to be notified of grant of the options, e
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = `A favourable tax treatment is available, which allows postponing taxation from exercise to sale. Check the box to see result.`
       infoBubble4.textContent = ``
-      taxReliefBubble.innerHTML = `There must be at least 1 year between the grant and exercise of the share options.
-<br>
-<br>During the options are held, the optionholder must be employed by the company
-<br>
-<br>Grant of options must be notified to the Latvian State Revenue service within 2 months.`
+      treatmentBody.innerHTML = `
+      <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
+	      <li>There must be at least 1 year between the grant and exercise of the share options.</li>
+	      <li>During the options are held, the optionholder must be employed by the company.</li>
+	      <li>Grant of options must be notified to the Latvian State Revenue service within 2 months.</li>
+      </ul>`
       
       break;
     case "lithuania":
@@ -476,7 +490,10 @@ The Estonian Tax and Customs Board has to be notified of grant of the options, e
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = `Social security contribution amount is average since they depend on personal circumstances or choices.`
       infoBubble4.textContent = `A favourable tax treatment is available, which allows postponing taxation from exercise to sale. Check the box to see result.`
-      taxReliefBubble.innerHTML = `There must be at least 3 years between the grant and exercise of the share options.`
+      treatmentBody.innerHTML = `
+      <div class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
+	      There must be at least 3 years between the grant and exercise of the share options.
+      </div>`
       
       break;
     case "malta":
@@ -523,11 +540,12 @@ The Estonian Tax and Customs Board has to be notified of grant of the options, e
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = ``
       infoBubble4.textContent = ``
-      taxReliefBubble.innerHTML = `Only company and group company employees are eligible.
-<br>
-<br>Benefit on the exercise is taxed with income tax of 15%. Progressive rates do not apply. No social security contributions.
-<br>
-<br>Company has to collect and keep the records to be able to prove correct valuation of fringe benefits.`
+      treatmentBody.innerHTML = `
+      <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
+	      <li>Only company and group company employees can participate.</li>
+	      <li>Benefit on the exercise is taxed with income tax of 15%. Progressive rates do not apply. No social security contributions.</li>
+	      <li>Company has to collect and keep the records to be able to prove the correct valuation of fringe benefits.</li>
+      </ul>`
 		  
       break;
     case "netherlands":
@@ -580,12 +598,15 @@ The Estonian Tax and Customs Board has to be notified of grant of the options, e
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = `Social security contribution amount is approximate since they are capped and depend on the exact amount of salary.`
       infoBubble4.textContent = `In general, capital gains on the disposal of shares are not taxed.`
-      taxReliefBubble.innerHTML = `No special treatment for ESOP plans.
-<br>
-<br>New tax rules for stock options apply from 1 January 2023:
-<ul role="list" class="tax-treatment-bubble_list">
-	<li>The tax point is at the exercise if the shares become tradable, i.e. the owner is able to sell the shares to any other person.</li>
-</ul>`
+      treatmentBody.innerHTML = `
+      <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
+      	      <li>No special treatment for ESOP plans.</li>
+	      <li>New tax rules for stock options apply from 1 January 2023:
+		      <ul role="list" class="tax-treatment-sublist">
+		      	<li>The tax point is at the exercise if the shares become tradable, i.e. the owner is able to sell the shares to any other person.</li>
+		      </ul>
+	      </li>
+      </ul>`
       
       break;
     case "czechia":
@@ -638,9 +659,11 @@ The Estonian Tax and Customs Board has to be notified of grant of the options, e
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = `No special favourable treatment for stock options is available. Phantom or virtual share plans (VSOP) may sometimes achieve better tax results since income is taxed when payment is received instead of taxation of estimated value of shares at the moment of vesting or exercise (so-called "dry income").`
       infoBubble4.textContent = ``
-      taxReliefBubble.innerHTML = `Unfortunately there is no favourable tax treatment available.
-<br>
-<br>Sale of share is tax free if the shares are held for 3+ years.`
+      treatmentBody.innerHTML = `
+      <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
+	      <li>Unfortunately there is no favourable tax treatment available.</li>
+       	      <li>Sale of share is tax free if the shares are held for 3+ years.</li>
+      </ul>`
       
       break;
     case "denmark":
@@ -697,21 +720,16 @@ The Estonian Tax and Customs Board has to be notified of grant of the options, e
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = `Social security contributions are not included since they are almost nonexistent or depend on personal choices. Municipal tax and labour market tax are included.`
       infoBubble4.textContent = `A favourable tax treatment is available, which allows postponing taxation from exercise to sale. Check the box to see result.`
-      taxReliefBubble.innerHTML = `Favourable tax rules apply to individual share-based remuneration plans ("section 7P" scheme).
-<br>
-<br>Only employees are eligible. Cannot be applied to contractors, board members etc
-<br>
-<br>Shares should be issued by the employer or the group company
-<br>
-<br>Employee shares cannot constitute a separate class of shares
-<br>
-<br>Allocated options cannot be assigned to anyone else
-<br>
-<br>Allocation must not exceed 10% of the annual salary. Exceptions apply to start-ups and if plan is offered to 80% of the employees
-<br>
-<br>Grant of options needs to be reported to the Tax Agency
-<br>
-<br>Favourable tax treatment can be applied to directly acquired shares, purchase options and subscription rights.`
+      treatmentBody.innerHTML = `
+      <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
+	      <li>Tax relief is available for individual share-based remuneration plans ("section 7P").</li>
+       	      <li>Only employees are eligible. Cannot be applied to contractors, board members etc.</li>
+	      <li>Shares should be issued by the employer or the group company.</li>
+       	      <li>Employee shares cannot constitute a separate class of shares.</li>
+	      <li>Allocated options cannot be assigned to anyone else.</li>
+       	      <li>Allocation must not exceed 10% of the annual salary. Exceptions apply to start-ups and if plan is offered to 80% of the employees.</li>
+	      <li>Grant of options needs to be notified to the Tax Agency.</li>
+      </ul>`
       
       break;
     case "poland":
@@ -764,13 +782,13 @@ The Estonian Tax and Customs Board has to be notified of grant of the options, e
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = `Social security contribution amount is average since they depend on personal circumstances or choices.`
       infoBubble4.textContent = `A favourable tax treatment is available, which allows postponing taxation from exercise to sale. Check the box to see result.`
-      taxReliefBubble.innerHTML = `The issuer of the shares is a joint stock company.
-<br>
-<br>The company is based in Poland or in another EU or EEA country, or in the country with which Poland has a tax treaty.
-<br>
-<br>Awards are granted based on the shareholders resolution.
-<br>
-<br>Tax advantage applies to incentive plans that correspond to the definition in the Polish income tax law.`
+      treatmentBody.innerHTML = `
+      <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
+	<li>The issuer of the shares is a joint stock company.</li>
+       	<li>The company is based in Poland or in another EU or EEA country, or in the country with which Poland has a tax treaty.</li>
+	<li>Awards are granted based on the shareholders resolution.</li>
+ 	<li>Tax advantage applies to incentive plans that correspond to the definition in the Polish income tax law.</li>
+      </ul>`
       
       break;
     case "georgia":
@@ -820,11 +838,13 @@ The Estonian Tax and Customs Board has to be notified of grant of the options, e
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = ``
       infoBubble4.textContent = ``
-      taxReliefBubble.innerHTML = `There is no special tax treatment for employee stock options. Stock options are considered taxable benefits from the employer.
-<br>
-<br>Double taxation of the same income at exercise and sale might occur.
-<br>
-<br>Sale of share is tax free if the shares are held for 2+ years.`
+      treatmentBody.innerHTML = `
+      <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
+	<li>There is no special tax treatment for employee stock options.</li>
+       	<li>Stock options are considered taxable benefits given by the employer to the employee.</li>
+	<li>Double taxation of the same income at exercise and sale might occur.</li>
+ 	<li>Sale of share is tax free if the shares are held for 2+ years.</li>	
+      </ul>`
       
       break;
     case "romania":
@@ -878,13 +898,13 @@ The Estonian Tax and Customs Board has to be notified of grant of the options, e
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = `A favourable tax treatment is available. Check the box to see result.`
       infoBubble4.textContent = ``
-      taxReliefBubble.innerHTML = `There must be at least 1 year between the grant and exercise of the share options.
-<br>
-<br>Employees and directors are eligible. Contractors and other collaborators are not.
-<br>
-<br>ESOP should be implemented by the same company which shares are offered.
-<br>
-<br>Health insurance (10%) is due on capital gains between 6 and 12 minimum gross salaries (3000 RON in 2023)`
+      treatmentBody.innerHTML = `
+      <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
+	<li>There must be at least 1 year between the grant and exercise of the share options.</li>
+       	<li>Employees and directors are eligible. Contractors and other collaborators are not.</li>
+	<li>ESOP should be implemented by the same company which shares are offered.</li>
+ 	<li>Health insurance (10%) is due on capital gains between 6 and 12 minimum gross salaries (3000 RON in 2023)</li>
+      </ul>`
       
       break;
     case "ukraine":
@@ -934,9 +954,11 @@ The Estonian Tax and Customs Board has to be notified of grant of the options, e
       infoBubble2.textContent = `Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.`
       infoBubble3.textContent = ``
       infoBubble4.textContent = ``
-      taxReliefBubble.innerHTML = `Unfortunately there is no favourable tax treatment available.
-<br>
-<br>Double taxation of the same income at exercise and sale might occur.`
+      treatmentBody.innerHTML = `
+      <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
+	<li>Unfortunately there is no favourable tax treatment available.</li>
+       	<li>Double taxation of the same income at exercise and sale might occur.</li>
+      </ul>`
       
       break;
     default:
@@ -1005,6 +1027,9 @@ const moreButtonExercisePrice = document.getElementById('exercise-price-more-but
 const moreButtonValueOfShares = document.getElementById('value-of-shares-more-button');
 const moreButtonSalePrice = document.getElementById('sale-price-more-button');
 const moreButtonAnnualIncome = document.getElementById('annual-income-more-button');
+
+//tips and treatment
+const treatmentBody = document.getElementById('treatment-body');
 
 exercisePriceField.addEventListener('input', (event) => {
   formatInputWithCommas(event.target);
