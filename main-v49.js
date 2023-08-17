@@ -169,7 +169,7 @@ const calculateTax = () => {
       
       taxAmount = calculatePersentValue(gainCapital, 27);
 
-      taxTipsBody.textContent = `
+      taxTipsBody.innerHTML = `
       <div>Tax rates are for 2023. They may change in the future.</div>
       <div>Personal deductions are not included. If the deductions were included, the tax bill would normally be less, not more.</div>
       <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
@@ -228,7 +228,7 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'inline';
       // moreButtonAnnualIncome.style.display = 'none';
 
-      taxTipsBody.textContent = `
+      taxTipsBody.innerHTML = `
       <div>Tax rates are for 2023. They may change in the future.</div>
       <div>Personal deductions are not included. If the deductions were included, the tax bill would normally be less, not more.</div>
       <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
@@ -287,7 +287,7 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'none';
       // moreButtonAnnualIncome.style.display = 'none';
 
-      taxTipsBody.textContent = `
+      taxTipsBody.innerHTML = `
       <div>Tax rates are for 2023. They may change in the future.</div>
       <div>Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.</div>
       <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
@@ -358,7 +358,7 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'inline';
       // moreButtonAnnualIncome.style.display = 'inline';
 
-      taxTipsBody.textContent = `
+      taxTipsBody.innerHTML = `
       <div>Tax rates are for 2023. They may change in the future.</div>
       <div>Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.</div>
       <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
@@ -429,7 +429,7 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'inline';
       // moreButtonAnnualIncome.style.display = 'none';
 
-      taxTipsBody.textContent = `
+      taxTipsBody.innerHTML = `
       <div>Tax rates are for 2023. They may change in the future.</div>
       <div>Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.</div>
       <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
@@ -492,7 +492,7 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'inline';
       // moreButtonAnnualIncome.style.display = 'inline';
 
-      taxTipsBody.textContent = `
+      taxTipsBody.innerHTML = `
       <div>Tax rates are for 2023. They may change in the future. </div>
       <div>Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.</div>
       <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
@@ -544,7 +544,7 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'none';
       // moreButtonAnnualIncome.style.display = 'none';
 
-      taxTipsBody.textContent = `
+      taxTipsBody.innerHTML = `
       <div>Tax rates are for 2023. They may change in the future.</div>
       <div>Personal deductions are not included.If the deductions were included, the tax bill would normally be less, not more.</div>
       <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
@@ -603,7 +603,7 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'inline';
       // moreButtonAnnualIncome.style.display = 'inline';
 
-      taxTipsBody.textContent = `
+      taxTipsBody.innerHTML = `
       <div>Tax rates are for 2023. They may change in the future.</div>
       <div>Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.</div>
       <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
@@ -666,7 +666,7 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'inline';
       // moreButtonAnnualIncome.style.display = 'none';
 
-      taxTipsBody.textContent = `
+      taxTipsBody.innerHTML = `
       <div>Tax rates are for 2023. They may change in the future. </div>
       <div>Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.</div>
       <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
@@ -728,7 +728,7 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'inline';
       // moreButtonAnnualIncome.style.display = 'inline';
 
-      taxTipsBody.textContent = `
+      taxTipsBody.innerHTML = `
       <div>Tax rates are for 2023. They may change in the future. </div>
       <div>Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.</div>
       <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
@@ -792,7 +792,7 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'inline';
       // moreButtonAnnualIncome.style.display = 'inline';
 
-      taxTipsBody.textContent = `
+      taxTipsBody.innerHTML = `
       <div>Tax rates are for 2023. They may change in the future. </div>
       <div>Progressive rates are taken into account, but personal deductions are not. If the personal deductions were included, the tax bill would normally be less, not more.</div>
       <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
@@ -850,7 +850,7 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'none';
       // moreButtonAnnualIncome.style.display = 'none';
 
-      taxTipsBody.textContent = `
+      taxTipsBody.innerHTML = `
       <div>Tax rates are for 2023. They may change in the future. </div>
       <div>Personal deductions are not included.If the deductions were included, the tax bill would normally be less, not more.</div>
       <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
@@ -911,7 +911,7 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'inline';
       // moreButtonAnnualIncome.style.display = 'none';
 
-      taxTipsBody.textContent = `
+      taxTipsBody.innerHTML = `
       <div>Tax rates are for 2023. They may change in the future. </div>
       <div>Personal deductions are not included.If the deductions were included, the tax bill would normally be less, not more.</div>
       <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
@@ -968,7 +968,7 @@ const calculateTax = () => {
       // moreButtonSalePrice.style.display = 'none';
       // moreButtonAnnualIncome.style.display = 'none';
 
-      taxTipsBody.textContent = `
+      taxTipsBody.innerHTML = `
       <div>Tax rates are for 2023. They may change in the future. </div>
       <div>Personal deductions are not included.If the deductions were included, the tax bill would normally be less, not more.</div>
       <div>Taxes that usually must be paid by employers are also deducted from the employee's gain since this is a common practice in equity-sharing plans.</div>
