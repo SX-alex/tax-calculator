@@ -49,13 +49,13 @@ function formatInputWithCommasWithZero(inputElement) {
   // Remove any non-numeric characters
   const numericInput = input.replace(/[^0-9]/g, '');
 
-  // Remove extra leading zeros except a single zero
-  const cleanedInput = numericInput.replace(/^0+(?=\d)/, '0');
+  // Remove extra leading zeros, allowing a single zero
+  let cleanedInput = numericInput.replace(/^0+(?=\d)/, '');
 
   // Add comma every 3 digits
   const formattedInput = cleanedInput.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
-  const inputValue = cleanedInput === '0' ? '' : formattedInput;
+  const inputValue = formattedInput;
 
   inputElement.value = inputValue;
 
