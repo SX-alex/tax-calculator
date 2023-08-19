@@ -1435,10 +1435,11 @@ valueOfSharesField.addEventListener('input', updateData);
 sharesPriceField.addEventListener('input', updateData);
 annualIncomeField.addEventListener('input', updateData);
 
-$('.form__get-tax').submit(()=>{
+$('.tax-calc-email-form').submit(()=>{
     loadingAllow = true;
     $('.trigger__show-tax-calc').click();
     document.getElementById('results').style.display = 'flex';
+    document.getElementById('tax-calc-email-form').style.display = 'none';
     showTaxLoaderAndResults();
     updateData();
     setTimeout(() => {
