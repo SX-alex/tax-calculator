@@ -1265,9 +1265,6 @@ const setCountryCur = (country) => {
         case "Latvia":
         case "Lithuania":
         case "Malta":
-        case "United Kingdom":
-	    value = "GBP";
-            break;
         case "Netherlands":
             value = "EUR";
             break;
@@ -1288,6 +1285,10 @@ const setCountryCur = (country) => {
             break;
         case "Ukraine":
             value = "UAH";
+            break;
+    	case "United Kingdom":
+		    console.log('uk')
+	    value = "GBP";
             break;
         default:
             value = "EUR";
