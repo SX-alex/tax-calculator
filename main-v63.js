@@ -1444,5 +1444,5 @@ $('.tax-calc-email-form').submit(()=>{
     updateData();
     setTimeout(() => {
         $('.navigato-to-res').click();
-    }, 500);
+    }, 300);
 });
