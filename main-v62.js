@@ -1438,7 +1438,7 @@ annualIncomeField.addEventListener('input', updateData);
 $('.tax-calc-email-form').submit(()=>{
     loadingAllow = true;
     $('.trigger__show-tax-calc').click();
-    document.getElementById('results').style.display = 'flex';
+    document.getElementById('results_wrapper').style.display = 'flex';
     document.getElementById('tax-calc-email-form').style.display = 'none';
     showTaxLoaderAndResults();
     updateData();
