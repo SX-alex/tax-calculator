@@ -1438,6 +1438,7 @@ annualIncomeField.addEventListener('input', updateData);
 $('.form__get-tax').submit(()=>{
     loadingAllow = true;
     $('.trigger__show-tax-calc').click();
+    document.getElementById('results').style.dispa = flex;
     showTaxLoaderAndResults();
     updateData();
     setTimeout(() => {
