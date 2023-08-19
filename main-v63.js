@@ -12,7 +12,7 @@ const showTaxLoaderAndResults = () => {
         setTimeout(() => {
             resultsElement.style.display = 'flex';
             taxLoaderElement.style.display = 'none';
-        }, 500);
+        }, 600);
     }
 }
 
@@ -1444,5 +1444,5 @@ $('.tax-calc-email-form').submit(()=>{
     updateData();
     setTimeout(() => {
         $('.navigato-to-res').click();
-    }, 300);
+    }, 100);
 });
