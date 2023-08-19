@@ -1440,8 +1440,8 @@ $('.tax-calc-email-form').submit(()=>{
     $('.trigger__show-tax-calc').click();
     document.getElementById('results_wrapper').style.display = 'flex';
     document.getElementById('tax-calc-email-form').style.display = 'none';
-    showTaxLoaderAndResults();
     updateData();
+    showTaxLoaderAndResults();
     setTimeout(() => {
         $('.navigato-to-res').click();
     }, 100);
