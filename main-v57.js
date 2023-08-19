@@ -1412,7 +1412,10 @@ taxCountryField.onchange = () => {
     updateData();
 };
 
-treatmentToggle.addEventListener('change', updateData);
+treatmentToggle.addEventListener('change', function () {
+    blockLoading = false;
+    updateData();
+});
 csopCheckboxUk.addEventListener('change', function () {
     blockLoading = false;
     setTimeout(updateData, 500)
