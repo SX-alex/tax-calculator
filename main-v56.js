@@ -1,10 +1,11 @@
 let loadingAllow = false;
+let blockLoading = false;
 
 const showTaxLoaderAndResults = () => {
     const resultsElement = document.getElementById('results');
     const taxLoaderElement = document.getElementById('tax-loader-group');
 
-    if (loadingAllow){
+    if (loadingAllow && blockLoading){
         resultsElement.style.display = 'none';
         taxLoaderElement.style.display = 'flex';
 
@@ -1346,6 +1347,7 @@ calculateTax();
 function updateData() {
     //show loader
     showTaxLoaderAndResults();
+    blockLoading = true;
 
     //set default values
 
@@ -1412,12 +1414,15 @@ taxCountryField.onchange = () => {
 
 treatmentToggle.addEventListener('change', updateData);
 csopCheckboxUk.addEventListener('change', function () {
+    blockLoading = false;
     setTimeout(updateData, 500)
 });
 vsopCheckboxUk.addEventListener('change', function () {
+    blockLoading = false;
     setTimeout(updateData, 500)
 });
 emiCheckboxUk.addEventListener('change', function () {
+    blockLoading = false;
     setTimeout(updateData, 500)
 });
 
