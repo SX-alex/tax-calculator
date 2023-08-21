@@ -1418,9 +1418,13 @@ taxCountryField.onchange = () => {
 treatmentToggle.addEventListener('change', function () {
     blockLoading = false;
     updateData();
+	console.log(treatmentToggle.checked)
     if ( treatmentToggle.checked ){
+	    console.log('checked')
+	    console.log(document.getElementById('tax-checkbox_toggle-true'))
 	    document.getElementById('tax-checkbox_toggle-true').click();
     }else{
+	    console.log('unchecked')
 	    document.getElementById('tax-checkbox_toggle-false').click();
     }
 });
