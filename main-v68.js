@@ -1418,6 +1418,11 @@ taxCountryField.onchange = () => {
 treatmentToggle.addEventListener('change', function () {
     blockLoading = false;
     updateData();
+    if ( treatmentToggle.checked ){
+	    document.getElementById('tax-checkbox_toggle-true').click();
+    }else{
+	    document.getElementById('tax-checkbox_toggle-false').click();
+    }
 });
 csopCheckboxUk.addEventListener('change', function () {
     blockLoading = false;
