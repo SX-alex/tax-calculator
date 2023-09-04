@@ -1160,7 +1160,7 @@ const calculateTax = () => {
 	case "bulgaria":
 	      // TAX POINT 
 	      
-	      taxPoint = isTreatmentToggle ? 'grant or exercise+sale' : 'grant or exercise+sale';
+	      taxPoint = isTreatmentToggle ? 'exercise+sale' : 'exercise+sale';
 	      
 	      //SOCIAL SECURITY CONTRIBUTIONS
 	      
@@ -1217,7 +1217,7 @@ const calculateTax = () => {
 	    case "croatia":
 	      // TAX POINT 
 	      
-	      taxPoint = isTreatmentToggle ? 'grant or exercise+sale' : 'grant or exercise+sale';
+	      taxPoint = isTreatmentToggle ? 'exercise+sale' : 'exercise+sale';
 	      
 	      //SOCIAL SECURITY CONTRIBUTIONS
 	      
@@ -1279,7 +1279,7 @@ const calculateTax = () => {
 	    case "greece":
 	      // TAX POINT 
 	      
-	      taxPoint = isTreatmentToggle ? 'exercise' : 'exercise';
+	      taxPoint = isTreatmentToggle ? 'sale' : 'exercise+sale';
 	      
 	      //SOCIAL SECURITY CONTRIBUTIONS
 	      
@@ -1342,7 +1342,7 @@ const calculateTax = () => {
 	    case "hungary":
 	      // TAX POINT 
 	      
-	      taxPoint = isTreatmentToggle ? 'grant or exercise+sale' : 'grant or exercise+sale';
+	      taxPoint = isTreatmentToggle ? 'exercise+sale' : 'exercise+sale';
 	      
 	      //SOCIAL SECURITY CONTRIBUTIONS
 	      
