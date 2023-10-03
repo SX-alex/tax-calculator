@@ -152,6 +152,24 @@ const calculateIncomeTaxProgres =(taxBrackets, pitRate, benefitAmountIncome, ben
     return taxAmount;
 }
 
+const calculateIncomeTaxProgresSpain =(taxBrackets, pitRate, gainNumber, plus) => {
+  
+  if (gainNumber <= taxBrackets[0]) {
+    return ((gainNumber) * pitRate[0]) / 100;
+  }
+ 
+  for (let i = 1; i < taxBrackets.length; i++) {
+    if (gainNumber <= taxBrackets[i]) {
+      const taxAmount = ((gainNumber - taxBrackets[i-1]) * pitRate[i]) / 100 + plus[i-1];
+      return taxAmount;
+    }
+  }
+
+  // If benefitAmountIncome is greater than the last tax bracket
+  const taxAmount = ((gainNumber - taxBrackets[taxBrackets.length - 1]) * pitRate[pitRate.length - 1]) / 100 + plus[plus.length - 1];
+  return taxAmount;
+}
+
 function formatOut(number) {
     // Round the number using Math.round
     const roundedNumber = Math.round(number);
