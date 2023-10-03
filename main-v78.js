@@ -1727,7 +1727,7 @@ const calculateTax = () => {
 	      ssrRate = 30.40;
 	      ssrRateE = 6.45;
 	      
-	      const verifyBenefitAmountIncome = benefitAmount > 12000 ?  benefitAmount - 12000 : verifyBenefitAmountIncome;
+	      const verifyBenefitAmountIncome = benefitAmount > 12000 ?  benefitAmount - 12000 : 0;
 	      
 	      ssc_erp_taxAmount = calculatePersentValue(benefitAmountIncome > 25290 && benefitAmountIncome < 53946 ? verifyBenefitAmountIncome : 0, ssrRate);
 	      ssc_erp_taxAmountVsop = calculatePersentValue(vsopBenefitAmountIncome > 25290 && vsopBenefitAmountIncome < 53946 ? vsopBenefitAmount : 0, ssrRate);
