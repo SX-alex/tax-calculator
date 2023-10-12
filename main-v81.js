@@ -1962,7 +1962,7 @@ const calculateTax = () => {
       
       break;
 
-    case "slovenian":
+    case "slovenia":
 	      // TAX POINT 
 	      
 	      taxPoint = isTreatmentToggle ? 'exercise+sale' : 'exercise+sale';
