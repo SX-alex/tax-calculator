@@ -2184,6 +2184,16 @@ const setCountryCur = (country) => {
         case "Belgium":
         case "Italy":
     	case "France":
+    	case "Spain":
+    	case "Finland":
+    	case "Portugal":
+    	case "Ireland":
+	case "Slovakia":
+    	case "Slovenia":
+    	case "Luxembourg":
+    	case "Sweden":
+            value = "SEK";
+            break;
         case "Netherlands":
             value = "EUR";
             break;
