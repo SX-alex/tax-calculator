@@ -2191,11 +2191,11 @@ const setCountryCur = (country) => {
 	case "Slovakia":
     	case "Slovenia":
     	case "Luxembourg":
-    	case "Sweden":
-            value = "SEK";
-            break;
         case "Netherlands":
             value = "EUR";
+            break;
+    	case "Sweden":
+            value = "SEK";
             break;
         case "Czechia":
             value = "CZK";
