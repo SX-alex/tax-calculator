@@ -2022,11 +2022,11 @@ const calculateTax = () => {
 	      ssrRate = 14.92;
 	      ssrRateE = 12.45;
 	      
-	      ssc_erp_taxAmount = benefitAmountIncome < 146824 ?  alculatePersentValue(benefitAmount, ssrRate) : 0;
-	      ssc_erp_taxAmountVsop = vsopBenefitAmountIncome < 146824 ?  alculatePersentValue(vsopBenefitAmount, ssrRate) : 0;
+	      ssc_erp_taxAmount = benefitAmountIncome < 146824 ?  calculatePersentValue(benefitAmount, ssrRate) : 0;
+	      ssc_erp_taxAmountVsop = vsopBenefitAmountIncome < 146824 ?  calculatePersentValue(vsopBenefitAmount, ssrRate) : 0;
 	
-	      ssc_eep_taxAmount = benefitAmountIncome < 146824 ?  alculatePersentValue(benefitAmount, ssrRateE) : 0;
-	      ssc_eep_taxAmountVsop = vsopBenefitAmountIncome < 146824 ? alculatePersentValue(vsopBenefitAmount, ssrRateE) : 0;
+	      ssc_eep_taxAmount = benefitAmountIncome < 146824 ?  calculatePersentValue(benefitAmount, ssrRateE) : 0;
+	      ssc_eep_taxAmountVsop = vsopBenefitAmountIncome < 146824 ? calculatePersentValue(vsopBenefitAmount, ssrRateE) : 0;
 	
 	      ssc_tc_taxAmount = ssc_erp_taxAmount + ssc_eep_taxAmount;
 	      ssc_tc_taxAmountChecked = ssc_tc_taxAmount;
