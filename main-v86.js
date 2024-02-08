@@ -2151,7 +2151,7 @@ exercisePriceField.addEventListener('input', (event) => {
 });
 
 valueOfSharesField.addEventListener('input', (event) => {
-    formatInputWithCommas(event.target);
+    formatInputWithCommasWithZero(event.target);
 });
 
 valueOfSharesGrantField.addEventListener('input', (event) => {
