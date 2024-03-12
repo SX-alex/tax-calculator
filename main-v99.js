@@ -2228,6 +2228,7 @@ const yourGainOut = document.getElementById('your-gain-out');
 const yourGainOutExtra = document.getElementById('your-gain-out-extra');
 const totalTaxesOutVsop = document.getElementById('total-taxes-out__vsop');
 const yourGainOutVsop = document.getElementById('your-gain-out__vsop');
+const yourGainOutVsopExtra = document.getElementById('your-gain-out__vsop-extra');
 
 const yourCostBar = document.getElementById('your-cost-bar');
 const totalTaxesBar = document.getElementById('total-taxes-bar');
@@ -2469,8 +2470,9 @@ function updateData() {
     yourGainOut.textContent = formatOut(sharesPriceLoc - valTotalTaxes - exercisePriceLoc);
     yourGainOutExtra.textContent = formatOut(sharesPriceLoc - valTotalTaxes - exercisePriceLoc - valSocialSecurityEmployer);
 
-    totalTaxesOutVsop.textContent = formatOut ( incomeTaxVsop + ssc_erp_taxAmountVsop );
-    yourGainOutVsop.textContent = formatOut ( sharesPriceLoc - ( incomeTaxVsop + ssc_erp_taxAmountVsop ) );
+    totalTaxesOutVsop.textContent = formatOut ( incomeTaxVsop + ssc_eep_taxAmountVsop );
+    yourGainOutVsop.textContent = formatOut ( sharesPriceLoc - ( incomeTaxVsop + ssc_eep_taxAmountVsop ) );
+    yourGainOutVsopExtra.textContent = formatOut ( sharesPriceLoc - ( incomeTaxVsop + ssc_eep_taxAmountVsop ) - ssc_erp_taxAmountVsop)
 
     yourCostBar.style.height = Math.ceil( ( exercisePriceLoc / sharesPriceLoc ) * 100) + "%";
     totalTaxesBar.style.height = Math.ceil( ( valTotalTaxes / sharesPriceLoc ) * 100) + "%";
