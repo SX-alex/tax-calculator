@@ -2474,7 +2474,7 @@ function updateData() {
     yourGainBar.style.height = Math.ceil( ( ( sharesPriceLoc - valTotalTaxes - exercisePriceLoc ) / sharesPriceLoc ) * 100) + "%";
     totalTaxesBarVsop.style.height = Math.ceil( ( ( incomeTaxVsop + ssc_tc_taxAmountVsop ) / sharesPriceLoc ) * 100) + "%";
     yourGainBarVsop.style.height = Math.ceil( ( ( sharesPriceLoc - ( incomeTaxVsop + ssc_tc_taxAmountVsop ) ) / sharesPriceLoc ) * 100) + "%";
-    yourGainBarVsopExtra.style.height = Math.ceil( ( ( sharesPriceLoc - ( incomeTaxVsop + ssc_tc_taxAmountVsop ) - valSocialSecurityEmployer ) / sharesPriceLoc ) * 100) + "%";
+    yourGainBarVsopExtra.style.height = Math.ceil( ( ( sharesPriceLoc - valSocialSecurityEmployer - ( incomeTaxVsop + ssc_tc_taxAmountVsop ) ) / sharesPriceLoc ) * 100) + "%";
 
 }
 
