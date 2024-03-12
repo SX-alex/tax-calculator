@@ -2461,13 +2461,13 @@ function updateData() {
     outVsopPayment.textContent = formatOut(valPaymentFromVsop)
     outVsopTaxPoint.textContent = "Payment";
     outVsopIncomeTaxes.textContent = formatOut(incomeTaxVsop);
-    outVsopSocialSecurity.textContent = formatOut(ssc_erp_taxAmountVsop);
-    outVsopSocialSecurityExtra.textContent = formatOut(ssc_eep_taxAmountVsop);
+    outVsopSocialSecurity.textContent = formatOut(ssc_eep_taxAmountVsop);
+    outVsopSocialSecurityExtra.textContent = formatOut(ssc_erp_taxAmountVsop);
 
     yourCostOut.textContent = formatOut(exercisePriceLoc);
-    totalTaxesOut.textContent = formatOut(valTotalTaxes);
-    yourGainOut.textContent = formatOut(sharesPriceLoc - valTotalTaxes - exercisePriceLoc);
-    yourGainOutExtra.textContent = formatOut(sharesPriceLoc - valTotalTaxes - exercisePriceLoc - valSocialSecurityEmployer);
+    totalTaxesOut.textContent = formatOut(valTotalTaxes + ssc_erp_taxAmountVsop);
+    yourGainOut.textContent = formatOut(sharesPriceLoc - ( valTotalTaxes + ssc_erp_taxAmountVsop );
+    yourGainOutExtra.textContent = formatOut(sharesPriceLoc - ( valTotalTaxes + ssc_erp_taxAmountVsop ) - ssc_eep_taxAmountVsop);
 
     totalTaxesOutVsop.textContent = formatOut ( incomeTaxVsop + ssc_erp_taxAmountVsop );
     yourGainOutVsop.textContent = formatOut ( sharesPriceLoc - ( incomeTaxVsop + ssc_erp_taxAmountVsop ) );
