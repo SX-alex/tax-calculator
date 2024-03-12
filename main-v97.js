@@ -2466,7 +2466,7 @@ function updateData() {
 
     yourCostOut.textContent = formatOut(exercisePriceLoc);
     totalTaxesOut.textContent = formatOut(valTotalTaxes + ssc_erp_taxAmountVsop);
-    yourGainOut.textContent = formatOut(sharesPriceLoc - ( valTotalTaxes + ssc_erp_taxAmountVsop );
+    yourGainOut.textContent = formatOut(sharesPriceLoc - ( valTotalTaxes + ssc_erp_taxAmountVsop ));
     yourGainOutExtra.textContent = formatOut(sharesPriceLoc - ( valTotalTaxes + ssc_erp_taxAmountVsop ) - ssc_eep_taxAmountVsop);
 
     totalTaxesOutVsop.textContent = formatOut ( incomeTaxVsop + ssc_erp_taxAmountVsop );
