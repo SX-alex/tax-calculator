@@ -958,9 +958,9 @@ const getData = () => {
         document.getElementById('final-gain-vsop').textContent = data.finalGainVsop;
         document.getElementById('employee-cost-vsop').textContent = data.employeeCostVsop;
         document.getElementById('monetary-gain-vsop').textContent = data.monetaryIncomeVsop;
-        document.getElementById('employee-taxes-vsop-total').textContent = data.employeeTaxesVsop;
+        document.getElementById('employee-taxes-vsop-total').textContent = data.employeeTaxesVsopTotal;
         document.getElementById('employee-gain-vsop').textContent = data.employeeGainVsop;
-        document.getElementById('employer-taxes-vsop-total').textContent = data.employerTaxesVsop;
+        document.getElementById('employer-taxes-vsop-total').textContent = data.employerTaxesVsopTotal;
 
         console.log(data);
     })
