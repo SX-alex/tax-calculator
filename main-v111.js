@@ -394,9 +394,19 @@ const getData = () => {
             
                 treatmentBody.innerHTML = `
                 <ul role="list" class="tax-treatment-list text is--color-neutral-900 is--caption is--regular">
-                    <li>There must be at least 1 year between the grant and exercise of the share options.</li>
-                    <li>During the options are held, the optionholder must be employed by the company.</li>
-                    <li>Grant of options must be notified to the Latvian State Revenue service within 2 months.</li>
+                    <li>If ESOP corresponds to the Finnish Income Tax Law, the participants pay taxes at exercise (otherwise at grant).</li>
+                    <li>Main conditions for the ESOP to be eligible for the favourable tax treatment: 
+	                    <ul role="list" class="tax-treatment-sublist">
+	                        <li>exercise price is below the market value</li>
+	                        <li>employment is the basis of the option grant. Board and council members are included. Contractors are not included.</li>
+	                    </ul>
+		    </li>
+                    <li>Tax relief from the employee's (and not the employer's) part of social security contributions is available if:
+	                    <ul role="list" class="tax-treatment-sublist">
+	                        <li>the exercise price is less than 50% of the market value</li>
+	                        <li>options are exercised within one year from the grant.</li>
+	                    </ul>
+		    </li>
                 </ul>`
                 break;
 
